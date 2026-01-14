@@ -67,17 +67,21 @@ interface MicropayService {
 
 ## 🛠️ Running the Simulation
 
-We have built a simulation script that mocks the server interaction to demonstrate the flow without needing live funds or external servers.
+We have upgraded the project to a **Next.js Web App** for a better visual experience.
 
 1.  **Install Dependencies**:
     ```bash
     npm install
     ```
 
-2.  **Run Agent Simulation**:
+2.  **Start the Dashboard**:
     ```bash
-    npx tsx src/agent/index.ts
+    npm run dev
     ```
+
+3.  **Visualize**:
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
+    Click **"Start Simulation"** to watch the Agent <-> Micropay synergy in real-time.
 
 ## 📝 Usage Example (Code Snippet)
 
