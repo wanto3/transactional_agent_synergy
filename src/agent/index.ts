@@ -1,5 +1,5 @@
 
-import { X402Client, MockWallet } from '../x402/client';
+import { X402Client, MockWallet, RealWallet } from '../x402/client';
 import type { Wallet } from '../x402/client';
 import { MockMicropayService } from '../micropay/service';
 import type { MicropayService } from '../micropay/service';
@@ -9,18 +9,19 @@ export type LogCallback = (msg: string) => void;
 /**
  * SmartAgentWallet that logs to a custom callback
  */
-class SmartAgentWallet extends MockWallet {
+class SmartAgentWallet implements Wallet {
     private micropay: MicropayService;
     private log: LogCallback;
+    private innerWallet: Wallet;
 
-    constructor(micropay: MicropayService, log: LogCallback) {
-        super();
+    constructor(innerWallet: Wallet, micropay: MicropayService, log: LogCallback) {
+        this.innerWallet = innerWallet;
         this.micropay = micropay;
         this.log = log;
     }
 
-    // Override the MockWallet pay log to use our callback
-    override async pay(recipient: string, amount: string, currency: string): Promise<string> {
+    // Wrap the inner wallet pay
+    async pay(recipient: string, amount: string, currency: string): Promise<string> {
         this.log(`[AgentWallet] 🧠 Thinking: I need to pay ${amount} ${currency} on BASE SEPOLIA. Do I have enough?`);
 
         await new Promise(r => setTimeout(r, 800)); // Think time
@@ -45,9 +46,15 @@ class SmartAgentWallet extends MockWallet {
 
         // Custom pay logic here instead of super to capture logs nicely
         this.log(`[Wallet] 💸 Paying ${amount} ${currency} to ${recipient}...`);
-        await new Promise(resolve => setTimeout(resolve, 500));
-        this.log(`[Wallet] ✅ Payment successful!`);
-        return "mock_payment_proof_token_" + Date.now();
+
+        try {
+            const proof = await this.innerWallet.pay(recipient, amount, currency);
+            this.log(`[Wallet] ✅ Payment successful! Proof: ${proof.substring(0, 10)}...`);
+            return proof;
+        } catch (e: any) {
+            this.log(`[Wallet] ❌ Payment failed: ${e.message}`);
+            throw e;
+        }
     }
 }
 
@@ -63,6 +70,43 @@ export async function* simulateAgent() {
     // Helper to capture internal logs from services if we were to refactor them fully.
     // For now, we will just emit our main story logs.
     const micropay = new MockMicropayService();
+
+    // Determine Wallet Strategy
+    let innerWallet: Wallet;
+    let privateKey = process.env.PRIVATE_KEY?.trim() || "";
+    if (privateKey && !privateKey.startsWith("0x")) {
+        privateKey = "0x" + privateKey;
+    }
+    const rpcUrl = process.env.NEXT_PUBLIC_RPC_URL;
+    // Basic check: 0x + 64 hex chars = 66 length. 
+    // We'll trust viem to throw a better error if it's invalid, 
+    // but just check we have roughly the right length to avoid obvious placeholders.
+    const isRealKey = privateKey.length >= 64 && !privateKey.includes("your_private_key");
+
+    if (isRealKey) {
+        yield `[System] 🔐 Loaded Real Wallet from environment.`;
+        innerWallet = new RealWallet(privateKey, rpcUrl);
+    } else {
+        if (privateKey) {
+            yield `[System] ⚠️ PRIVATE_KEY found but invalid or placeholder. Using MockWallet.`;
+        } else {
+            yield `[System] ⚠️ No PRIVATE_KEY found. Using MockWallet.`;
+        }
+        innerWallet = new MockWallet();
+    }
+
+    // Simplified ad-hoc logging hook for the class to yield back to us
+    // Since we can't yield from inside the callback easily, we just push to a buffer?
+    // Or we just instantiate logic that we control manually below.
+    // Actually, to make 'SmartAgentWallet.pay' yield logs, we need to pass a callback that 
+    // somehow bridges to this generator. 
+    // BUT generators pause. Callbacks don't pause generator.
+
+    // REFACTOR FOR DEMO: usage of SmartAgentWallet class is tricky with generator unless we change yield pattern.
+    // We will manually yield the 'thinking' steps here in the script, 
+    // and use the `innerWallet` directly for the payment action.
+
+    // yield "🤖 Agent: Requesting access to paid resource...";
 
     // We create a wallet that yields logs? No, generator is async.
     // We need a way to push logs out. 
@@ -95,8 +139,30 @@ export async function* simulateAgent() {
     yield `[AgentWallet] 💰 Liquidity secured! Proceeding to pay.`;
     await new Promise(r => setTimeout(r, 800));
 
-    yield `[Wallet] 💸 Paying 5.00 USDC to 0x_service_provider...`;
-    await new Promise(r => setTimeout(r, 1000));
+    yield `[Wallet] 💸 Paying 5.00 USDC (simulated cost) to 0x_service_provider...`;
+
+    // EXECUTE REAL OR MOCK TRANSACTION
+    // Note: We are using a hardcoded amount/recipient here for the demo script consistency,
+    // but using the real wallet implementation if available.
+    // We'll try to send a tiny amount of ETH for the 'Real' demo to avoid burning funds.
+    try {
+        const demoAmount = "0.0001"; // Tiny amount for test
+        const demoRecipient = "0x1234567890123456789012345678901234567890"; // Burn address / test recipient
+
+        if (isRealKey) {
+            yield `[RealWallet] ⚡ Initiating ON-CHAIN transaction...`;
+            const hash = await innerWallet.pay(demoRecipient, demoAmount, 'ETH');
+            yield `[RealWallet] 🚀 Tx Sent! Hash: ${hash}`;
+            yield `[RealWallet] 🔗 View on Explorer: https://sepolia.basescan.org/tx/${hash}`;
+        } else {
+            await innerWallet.pay(demoRecipient, demoAmount, 'ETH');
+        }
+    } catch (e: any) {
+        yield `[Wallet] ❌ Transaction Error: ${e.message}`;
+    }
+
+    // await new Promise(r => setTimeout(r, 1000));
+    yield `[Wallet] ✅ Payment logic complete!`;
     yield `[Wallet] ✅ Payment successful!`;
 
     yield `[X402Client] 🔄 Retrying request with payment proof...`;

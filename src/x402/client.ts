@@ -1,6 +1,9 @@
 
 import axios, { AxiosError } from 'axios';
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
+import { createWalletClient, http, parseEther, type WalletClient as ViemWalletClient, publicActions } from 'viem';
+import { privateKeyToAccount } from 'viem/accounts';
+import { baseSepolia } from 'viem/chains';
 
 /**
  * Interface representing the payment details extracted from a 402 response.
@@ -26,6 +29,47 @@ export class MockWallet implements Wallet {
         await new Promise(resolve => setTimeout(resolve, 500));
         console.log(`[Wallet] ✅ Payment successful!`);
         return "mock_payment_proof_token_" + Date.now();
+    }
+}
+
+export class RealWallet implements Wallet {
+    private client;
+
+    constructor(privateKey: string, rpcUrl?: string) {
+        const account = privateKeyToAccount(privateKey as `0x${string}`);
+        this.client = createWalletClient({
+            account,
+            chain: baseSepolia,
+            transport: http(rpcUrl || 'https://sepolia.base.org')
+        }).extend(publicActions);
+    }
+
+    async pay(recipient: string, amount: string, currency: string): Promise<string> {
+        console.log(`[RealWallet] 💸 Initiating real transaction: ${amount} ${currency} to ${recipient}`);
+
+        // Simple heuristic: assume amount is in ETH/Standard Unit. 
+        // In a real generic agent, we'd need a token map.
+        // For this demo, we assume currency='ETH' or 'USDC' implies native/token transfer.
+        // SIMPLIFICATION: We will treat everything as native ETH transfer for Base Sepolia demo if 'amount' is small.
+        // OR we just parseEther.
+
+        try {
+            const hash = await this.client.sendTransaction({
+                to: recipient as `0x${string}`,
+                value: parseEther(amount),
+            });
+
+            console.log(`[RealWallet] 🚀 Transaction sent! Hash: ${hash}`);
+            console.log(`[RealWallet] ⏳ Waiting for confirmation...`);
+
+            const receipt = await this.client.waitForTransactionReceipt({ hash });
+
+            console.log(`[RealWallet] ✅ Transaction confirmed in block ${receipt.blockNumber}`);
+            return hash;
+        } catch (error) {
+            console.error(`[RealWallet] ❌ Transaction failed:`, error);
+            throw error;
+        }
     }
 }
 
