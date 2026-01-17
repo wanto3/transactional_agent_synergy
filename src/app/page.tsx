@@ -72,10 +72,10 @@ export default function Home() {
                         <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
                             Transactional Agent
                         </h1>
-                        <p className="text-gray-400 mt-2">x402 Protocol • Micropay Synergy • Base Sepolia</p>
+                        <p className="text-gray-400 mt-2">x402 Protocol • Transactional Agent • Arbitrum Sepolia</p>
                     </div>
                     <div className={`px-4 py-2 rounded-full text-xs font-bold transition-colors ${micropayActive ? 'bg-green-500/20 text-green-400 border border-green-500/50 animate-pulse' : 'bg-gray-800 text-gray-500 border border-gray-700'}`}>
-                        {micropayActive ? "● MICROPAY ACTIVE" : "○ MICROPAY IDLE"}
+                        {micropayActive ? "● AGENT ACTIVE" : "○ AGENT IDLE"}
                     </div>
                 </header>
 
@@ -104,7 +104,7 @@ export default function Home() {
                                         <Coins size={16} />
                                         Liquidity
                                     </span>
-                                    <span className="text-purple-400 text-sm">Micropay Link</span>
+                                    <span className="text-purple-400 text-sm">Native Wallet</span>
                                 </div>
                             </div>
                         </div>

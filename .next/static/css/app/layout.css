@@ -96,9 +96,6 @@
 .grid {
   display: grid;
 }
-.hidden {
-  display: none;
-}
 .h-\[500px\] {
   height: 500px;
 }
