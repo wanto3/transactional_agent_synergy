@@ -1,97 +1,49 @@
-# Transactional Agent x Micropay Synergy
+# Synergy Transactional Agent
 
-## 🚀 Project Overview
+A Next.js-based autonomous agent capable of performing real blockchain transactions on **Arbitrum Sepolia**.
 
-This project is a technical proof-of-concept demonstrating the synergy between **Autonomous Agents** (built by Us) and **Liquidity Infrastructure** (Micropay, built by Marco). 
+## 🚀 Features
+- **Real Wallet Integration**: Uses `viem` to securely sign and send transactions.
+- **Agent Workflow**: Defined tasks that are executed autonomously.
+- **Live UI Streaming**: Real-time logs streamed from the server to the frontend via Server-Sent Events (SSE).
 
-We are solving the critical "Last Mile" problem for AI Agents: **How do agents pay for resources, APIs, and services autonomously?**
+## 🛠️ Prerequisites
+- **Node.js** (v18+ recommended)
+- **Arbitrum Sepolia ETH**: You need testnet ETH in your wallet. [Get some here](https://faucet.quicknode.com/arbitrum/sepolia).
 
-### The Core Problem
-1.  **Payment Friction**: Agents encounter paywalls (HTTP 402) but lack the context/funds to solve them instantly.
-2.  **Liquidity Fragmentation**: An agent might have funds on Arbitrum, but the service demands payment on Base.
-3.  **Complexity**: Embedding complex bridging/swapping logic into every agent bloats the codebase and introduces security risks.
+## 📦 Setup Instructions
 
-### The Solution: "Synergy"
-*   **The Agent (Client)**: Lightweight, focused on the task. It uses the **x402 Protocol** to standardise payment handling.
-*   **Micropay (Infrastructure)**: The "Liquidity Engine". The agent treats Micropay as its treasury, requesting funds on-demand for specific chains.
-
----
-
-## 🗺️ Roadmap & Phasing
-
-### Phase 1: The "Base Sepolia First" approach (Current Focus)
-**Goal**: Prove the Agent <-> x402 interaction is seamless on a single high-performance chain.
-
-*   **Network**: Base Sepolia (Chain ID: 84532).
-*   **Why Base?**: The native home of x402, fast, and testnet is free.
-*   **Workflow**:
-    1.  Agent hits a paid resource.
-    2.  Receives `402 Payment Required`.
-    3.  Agent handles the invoice autonomously.
-    4.  **Verification**: Confirm successful payment and resource access.
-*   **Status**: ✅ Simulation Complete.
-
-### Phase 2: The "Micropay" Evolution (Future)
-**Goal**: Solve the cross-chain liquidity problem.
-
-*   **Scenario**: Agent is on Base, Service is on Optimism.
-*   **Workflow**:
-    1.  Agent receives 402 (Optimism USDC).
-    2.  Agent checks local wallet: *Insufficient funds on Optimism*.
-    3.  **Call to Micropay**: "I need 5 USDC on Optimism, I have funds on Base."
-    4.  Micropay provides instant liquidity to the Agent's Optimism address.
-    5.  Agent completes the x402 payment.
-
----
-
-## 🏗️ Technical Architecture
-
-### 1. **x402 Client (`src/x402`)**
-A specialized HTTP client (Axios wrapper) that acts as a middleware for the agent.
-*   **Interceptor**: Automatically catches `402` errors.
-*   **Parser**: Extracts `amount`, `currency`, and `destination`.
-*   **Executor**: Triggers the wallet to Pay & Retry.
-
-### 2. **Smart Wallet (`src/agent`)**
-The brain of the operation. It decides *how* to pay.
-*   **Phase 1**: Checks local balance -> Pays.
-*   **Phase 2**: Checks local balance -> Falls back to Micropay -> Pays.
-
-### 3. **Micropay Service Interface (`src/micropay`)**
-The abstraction layer for Marco's infrastructure.
-```typescript
-interface MicropayService {
-    provideLiquidity(req: LiquidityRequest): Promise<LiquidityResponse>;
-}
-```
-
-## 🛠️ Running the Simulation
-
-We have upgraded the project to a **Next.js Web App** for a better visual experience.
-
-1.  **Install Dependencies**:
+1.  **Clone/Open the project**
+2.  **Install Dependencies**
     ```bash
     npm install
     ```
+3.  **Configure Environment**
+    Create a `.env.local` file in the root directory:
+    ```bash
+    # Required: Your Wallet Private Key (with or without 0x prefix)
+    PRIVATE_KEY=your_private_key_here
 
-2.  **Start the Dashboard**:
+    # Optional: Custom RPC URL (defaults to public Arbitrum Sepolia RPC)
+    NEXT_PUBLIC_RPC_URL=https://sepolia-rollup.arbitrum.io/rpc
+    ```
+
+## ▶️ How to Run
+1.  Start the development server:
     ```bash
     npm run dev
     ```
+2.  Open your browser to the URL shown in the terminal (usually `http://localhost:3000`).
 
-3.  **Visualize**:
-    Open [http://localhost:3000](http://localhost:3000) in your browser.
-    Click **"Start Simulation"** to watch the Agent <-> Micropay synergy in real-time.
+## 🧪 Testing
+1.  Click the **Pay 0.0001 ETH (Arbitrum)** button.
+2.  The UI will show the agent's progress:
+    - initializing wallet...
+    - sending transaction...
+    - **Success!** (with a link to the transaction on Arbiscan)
 
-## 📝 Usage Example (Code Snippet)
-
-```typescript
-// The agent simply tries to 'get' data. 
-// The complexity of payment is hidden in the client layers.
-try {
-    const data = await agent.get('https://api.premium-service.com/data');
-} catch (e) {
-    // 402 errors are handled automatically!
-    // If code reaches here, it's a real error (404, 500, etc)
-}
-```
+## 📁 Project Structure
+- `src/agent/index.ts`: The core agent logic.
+- `src/x402/client.ts`: Wallet implementation (Real & Mock).
+- `src/app/api/stream/route.ts`: API endpoint for running the agent.
+- `src/app/page.tsx`: Frontend UI.

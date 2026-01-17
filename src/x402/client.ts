@@ -3,34 +3,9 @@ import axios, { AxiosError } from 'axios';
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { createWalletClient, http, parseEther, type WalletClient as ViemWalletClient, publicActions } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
-import { baseSepolia } from 'viem/chains';
+import { arbitrumSepolia } from 'viem/chains';
 
-/**
- * Interface representing the payment details extracted from a 402 response.
- */
-interface PaymentRequirement {
-    url: string; // The URL to send payment to or metadata about payment
-    amount: string;
-    currency: string;
-    recipientAddress: string;
-}
-
-/**
- * Mock Wallet Interface
- */
-export interface Wallet {
-    pay(recipient: string, amount: string, currency: string): Promise<string>;
-}
-
-export class MockWallet implements Wallet {
-    async pay(recipient: string, amount: string, currency: string): Promise<string> {
-        console.log(`[Wallet] 💸 Paying ${amount} ${currency} to ${recipient}...`);
-        // Simulate network delay
-        await new Promise(resolve => setTimeout(resolve, 500));
-        console.log(`[Wallet] ✅ Payment successful!`);
-        return "mock_payment_proof_token_" + Date.now();
-    }
-}
+// ...
 
 export class RealWallet implements Wallet {
     private client;
@@ -39,24 +14,21 @@ export class RealWallet implements Wallet {
         const account = privateKeyToAccount(privateKey as `0x${string}`);
         this.client = createWalletClient({
             account,
-            chain: baseSepolia,
-            transport: http(rpcUrl || 'https://sepolia.base.org')
+            chain: arbitrumSepolia,
+            transport: http(rpcUrl || 'https://sepolia-rollup.arbitrum.io/rpc')
         }).extend(publicActions);
     }
 
     async pay(recipient: string, amount: string, currency: string): Promise<string> {
         console.log(`[RealWallet] 💸 Initiating real transaction: ${amount} ${currency} to ${recipient}`);
 
-        // Simple heuristic: assume amount is in ETH/Standard Unit. 
-        // In a real generic agent, we'd need a token map.
-        // For this demo, we assume currency='ETH' or 'USDC' implies native/token transfer.
-        // SIMPLIFICATION: We will treat everything as native ETH transfer for Base Sepolia demo if 'amount' is small.
-        // OR we just parseEther.
-
         try {
+            // Ensure amount is string and valid
+            const value = parseEther(amount);
+
             const hash = await this.client.sendTransaction({
                 to: recipient as `0x${string}`,
-                value: parseEther(amount),
+                value: value,
             });
 
             console.log(`[RealWallet] 🚀 Transaction sent! Hash: ${hash}`);
@@ -64,10 +36,14 @@ export class RealWallet implements Wallet {
 
             const receipt = await this.client.waitForTransactionReceipt({ hash });
 
-            console.log(`[RealWallet] ✅ Transaction confirmed in block ${receipt.blockNumber}`);
-            return hash;
-        } catch (error) {
-            console.error(`[RealWallet] ❌ Transaction failed:`, error);
+            if (receipt.status === 'success') {
+                console.log(`[RealWallet] ✅ Transaction confirmed in block ${receipt.blockNumber}`);
+                return hash;
+            } else {
+                throw new Error(`Transaction failed with status: ${receipt.status}`);
+            }
+        } catch (error: any) {
+            console.error(`[RealWallet] ❌ Transaction failed:`, error.message || error);
             throw error;
         }
     }
@@ -160,4 +136,23 @@ export class X402Client {
     public async post(url: string, data?: any, config?: AxiosRequestConfig) {
         return this.client.post(url, data, config);
     }
+}
+
+export class MockWallet implements Wallet {
+    async pay(recipient: string, amount: string, currency: string): Promise<string> {
+        console.log(`[MockWallet] ⚠️ Simulating payment of ${amount} ${currency} to ${recipient}`);
+        await new Promise(r => setTimeout(r, 1000));
+        return "0xMOCK_TRANSACTION_HASH_" + Date.now();
+    }
+}
+
+export interface Wallet {
+    pay(recipient: string, amount: string, currency: string): Promise<string>;
+}
+
+interface PaymentRequirement {
+    url: string;
+    amount: string;
+    currency: string;
+    recipientAddress: string;
 }

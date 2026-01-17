@@ -33,8 +33,13 @@ export default function Home() {
         setLogs([]);
 
         try {
+            console.log("Starting fetch to /api/stream");
             const response = await fetch("/api/stream");
-            if (!response.body) return;
+            console.log("Fetch response status:", response.status);
+            if (!response.body) {
+                console.error("Response body is null");
+                return;
+            }
 
             const reader = response.body.getReader();
             const decoder = new TextDecoder();
@@ -108,15 +113,15 @@ export default function Home() {
                             onClick={runSimulation}
                             disabled={isRunning}
                             className={`w-full py-4 rounded-xl font-bold flex items-center justify-center gap-3 transition-all ${isRunning
-                                    ? 'bg-gray-800 text-gray-500 cursor-not-allowed'
-                                    : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white shadow-lg shadow-blue-900/20'
+                                ? 'bg-gray-800 text-gray-500 cursor-not-allowed'
+                                : 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white shadow-lg shadow-blue-900/20'
                                 }`}
                         >
                             {isRunning ? (
-                                <>Processing...</>
+                                <>Processing Transaction...</>
                             ) : (
                                 <>
-                                    <Play size={20} /> Start Simulation
+                                    <Play size={20} /> Pay 0.0001 ETH (Arbitrum)
                                 </>
                             )}
                         </button>
