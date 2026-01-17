@@ -123,7 +123,7 @@ export default function Home() {
                                 <>Processing Transaction...</>
                             ) : (
                                 <>
-                                    <Play size={20} /> Pay 0.0001 ETH (Arbitrum)
+                                    <Play size={20} /> Run x402 Protocol (Access Premium)
                                 </>
                             )}
                         </button>
@@ -168,6 +168,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </main>
+        </main >
     );
 }

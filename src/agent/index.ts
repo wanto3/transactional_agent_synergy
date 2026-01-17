@@ -1,5 +1,5 @@
 
-import { RealWallet, MockWallet, Wallet } from '../x402/client';
+import { RealWallet, MockWallet, Wallet, X402Client } from '../x402/client';
 import { MockMicropayService, MicropayService } from '../micropay/service';
 
 export interface AgentConfig {
@@ -40,32 +40,35 @@ export class TransactionalAgent {
         };
 
         log("-----------------------------------------");
-        log("🤖 Synergy Agent Starting (Real Transaction Mode - Arbitrum Sepolia)...");
+        log("🤖 Synergy Agent Starting (x402 Protocol Mode)...");
         log("-----------------------------------------");
 
-        // 1. Define the task
-        const amountRef = "0.0001"; // small test amount
-        const currencyRef = "ETH";
-        // Demo recipient (e.g. burn address or self)
-        const recipientRef = "0x000000000000000000000000000000000000dEaD";
+        // 1. Initialize X402 Client
+        const x402 = new X402Client("http://localhost:3000", this.wallet, log);
 
-        log(`[Agent] 🎯 Task: Pay ${amountRef} ${currencyRef} to ${recipientRef}`);
-        log(`[Agent] 🧠 Checks: skipping liquidity check for single-chain simple mode.`);
-
-        // 2. Execute Payment
+        // 2. Execution Loop
         try {
-            log(`[Agent] 💸 Sending payment...`);
-            const txHash = await this.wallet.pay(recipientRef, amountRef, currencyRef);
+            log(`[Agent] 🎯 Task: Access Premium Content at /api/premium`);
+            log(`[Agent] 🚀 Sending GET request...`);
+
+            // This single line triggers the entire 402 negotiation flow
+            const response = await x402.get("/api/premium");
 
             log("-----------------------------------------");
             log("✅ AGENT SUCCESS");
-            log(`Transaction Hash: ${txHash}`);
-            log(`Explorer Link: https://sepolia.arbiscan.io/tx/${txHash}`);
+            log(`[HTTP 200] 🟢 Content Access Granted`);
+            log(`Content Accessed: "${response.data.message}"`);
+            log(`Data: ${response.data.data}`);
             log("-----------------------------------------");
-            return txHash;
+            return "SUCCESS";
         } catch (error: any) {
             log(`[Agent] ❌ Agent Failed: ${error.message}`);
+            if (error.response) {
+                log(`[Agent] Status: ${error.response.status}`);
+                log(`[Agent] Data: ${JSON.stringify(error.response.data)}`);
+            }
             throw error;
         }
+
     }
 }
