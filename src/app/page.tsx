@@ -151,7 +151,16 @@ export default function Home() {
                                 ${log.includes("Thinking") ? "text-yellow-200/80 italic" : ""}
                             `}>
                                         <span className="text-gray-700 mr-2 opacity-50">[{i + 1}]</span>
-                                        {log}
+                                        {log.includes("http") ? (
+                                            <span>
+                                                {log.split("http")[0]}
+                                                <a href={`http${log.split("http")[1]}`} target="_blank" rel="noopener noreferrer" className="text-blue-400 underline hover:text-blue-300">
+                                                    http{log.split("http")[1]}
+                                                </a>
+                                            </span>
+                                        ) : (
+                                            log
+                                        )}
                                     </div>
                                 ))}
                             </div>
