@@ -30,6 +30,9 @@ export async function GET() {
                 }
             };
 
+            const runId = Date.now().toString().slice(-4);
+            logCallback(`[System] 🆔 Run ID: ${runId}`);
+
             try {
                 await agent.run(logCallback);
             } catch (e: any) {
@@ -44,6 +47,10 @@ export async function GET() {
         headers: {
             'Content-Type': 'text/plain; charset=utf-8',
             'Transfer-Encoding': 'chunked',
+            'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0',
+            'Connection': 'keep-alive',
         },
     });
 }

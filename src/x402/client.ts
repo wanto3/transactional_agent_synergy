@@ -26,9 +26,16 @@ export class RealWallet implements Wallet {
             // Ensure amount is string and valid
             const value = parseEther(amount);
 
+            // Debugging Nonce
+            const count = await this.client.getTransactionCount({
+                address: this.client.account.address
+            });
+            console.log(`[RealWallet] 🔢 Nonce for ${this.client.account.address}: ${count}`);
+
             const hash = await this.client.sendTransaction({
                 to: recipient as `0x${string}`,
                 value: value,
+                nonce: count,
             });
 
             console.log(`[RealWallet] 🚀 Transaction sent! Hash: ${hash}`);
