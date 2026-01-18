@@ -3,8 +3,8 @@ import { TransactionalAgent } from "../../../agent";
 // Force dynamic prevents caching
 export const dynamic = 'force-dynamic';
 
-export async function GET() {
-    console.log("API: /api/stream called");
+export async function GET(request: Request) {
+    console.log("API: /api/stream called at " + new Date().toISOString());
     const encoder = new TextEncoder();
 
     const stream = new ReadableStream({
@@ -30,8 +30,9 @@ export async function GET() {
                 }
             };
 
-            const runId = Date.now().toString().slice(-4);
+            const runId = Date.now().toString() + "-" + Math.floor(Math.random() * 1000);
             logCallback(`[System] 🆔 Run ID: ${runId}`);
+            logCallback(`[System] 🕐 Time: ${new Date().toISOString()}`);
 
             try {
                 await agent.run(logCallback);
@@ -47,10 +48,11 @@ export async function GET() {
         headers: {
             'Content-Type': 'text/plain; charset=utf-8',
             'Transfer-Encoding': 'chunked',
-            'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+            'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
             'Pragma': 'no-cache',
             'Expires': '0',
             'Connection': 'keep-alive',
+            'X-Accel-Buffering': 'no' // Disable Nginx buffering if applicable
         },
     });
 }

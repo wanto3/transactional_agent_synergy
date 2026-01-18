@@ -34,7 +34,7 @@ export default function Home() {
 
         try {
             console.log("Starting fetch to /api/stream");
-            const response = await fetch("/api/stream?t=" + Date.now(), {
+            const response = await fetch("/api/stream?t=" + Date.now() + "-" + Math.random(), {
                 cache: 'no-store'
             });
             console.log("Fetch response status:", response.status);

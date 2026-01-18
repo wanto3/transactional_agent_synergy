@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
-import { createWalletClient, http, parseEther, type WalletClient as ViemWalletClient, publicActions } from 'viem';
+import { createWalletClient, http, parseEther, type WalletClient as ViemWalletClient, publicActions, stringToHex } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
 import { arbitrumSepolia } from 'viem/chains';
 
@@ -37,7 +37,7 @@ export class RealWallet implements Wallet {
             if (nextNonce !== null) {
                 // If we have a corrected nonce from a previous error, use it
                 count = nextNonce;
-                logger(`[RealWallet] 🔢 Nonce Check (Attempt ${attempt}) -> Using CORRECTED nonce: ${count}`);
+                logger(`[RealWallet] 🔢 Nonce Check (Attempt ${attempt}) [${new Date().toISOString()}] -> Using CORRECTED nonce: ${count}`);
             } else {
                 // Otherwise fetch fresh from RPC
                 const rpcNonce = await this.client.getTransactionCount({
@@ -45,14 +45,21 @@ export class RealWallet implements Wallet {
                     blockTag: 'pending'
                 });
                 count = rpcNonce;
-                logger(`[RealWallet] 🔢 Nonce Check (Attempt ${attempt}) -> RPC: ${rpcNonce}, USING: ${count}`);
+                logger(`[RealWallet] 🔢 Nonce Check (Attempt ${attempt}) [${new Date().toISOString()}] -> RPC: ${rpcNonce}, USING: ${count}`);
             }
 
             try {
+                // We add unique data to ensure the transaction hash is always new.
+                // This prevents "replay" of old transaction hashes if parameters are identical.
+                // If the nonce is stale (already used), this unique tx will trigger "Nonce too low",
+                // enabling our retry logic to increment and find the real nonce.
+                const uniqueData = stringToHex(`Synergy-Run-${Date.now()}-${Math.floor(Math.random() * 10000)}`);
+
                 const hash = await this.client.sendTransaction({
                     to: recipient as `0x${string}`,
                     value: value,
                     nonce: count,
+                    data: uniqueData,
                 });
 
                 logger(`[RealWallet] 🚀 Transaction sent! Hash: ${hash}`);
