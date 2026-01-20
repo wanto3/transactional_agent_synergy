@@ -1,0 +1,31 @@
+✅ Loaded .env.local
+🚀 Starting Integration Test: Transactional Agent vs RailBridge Merchant
+[Agent] [X402Client] 🚀 x402 Client setup complete with EVM scheme
+🎯 Targeting: http://localhost:4021/api/premium
+---------------------------------------------------
+📡 Sending request (expecting 402 -> Payment -> 200)...
+[Agent] [X402Client] [Req:2367] 📤 GET http://localhost:4021/api/premium
+[Agent] [X402Client] [Req:2367] ⏱️ Start Block (Raw RPC): 36566673
+[Agent] [X402Client] 📋 Available payment options: [{"scheme":"exact","network":"eip155:84532","amount":"100000","asset":"0x036CbD53842c5426634e7929541eC2318f3dCF7e","payTo":"0x1111111111111111111111111111111111111111","maxTimeoutSeconds":300,"extra":{"name":"USDC","version":"2"}}]
+[Agent] [X402Client] ✨ Selected option: eip155:84532 (100000 0x036CbD53842c5426634e7929541eC2318f3dCF7e)
+[Agent] [X402Client] ✍️ Signing TYPED DATA...
+[X402Client] ✍️ Signing TYPED DATA...
+[Agent] [X402Client] ℹ️ Domain: {"name":"USDC","version":"2","chainId":84532,"verifyingContract":"0x036CbD53842c5426634e7929541eC2318f3dCF7e"}
+[Agent] [X402Client] 📥 Response Status: 200
+[Agent] [X402Client] 🔍 Searching for transaction hash on-chain...
+[Agent] [X402Client] [Req:2367] 🔄 Attempt 1/10: Trawling logs...
+[Agent] [X402Client] [Req:2367] ✅ Found FRESH Transaction Hash: 0x2d40f7c597ceec4802144008f4b92e00dcf98c65b9e75c9463a016e639b3bba6
+[Agent] [X402Client] [Req:2367]    Log Block: 36566677, Start: 36566673
+[Agent] [X402Client] [Req:2367] 🔗 Explorer: https://sepolia.basescan.org/tx/0x2d40f7c597ceec4802144008f4b92e00dcf98c65b9e75c9463a016e639b3bba6
+---------------------------------------------------
+✅ Response Status: 200
+📦 Data: {
+  "message": "You successfully paid for this premium content.",
+  "data": {
+    "timestamp": 1768901636715,
+    "value": "premium-data",
+    "transactionHash": "0x2d40f7c597ceec4802144008f4b92e00dcf98c65b9e75c9463a016e639b3bba6",
+    "network": "eip155:84532"
+  }
+}
+🎉 INTEGRATION SUCCESSFUL!

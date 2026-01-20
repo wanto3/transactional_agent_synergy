@@ -1,5 +1,5 @@
 
-import { RealWallet, MockWallet, Wallet, X402Client } from '../x402/client';
+import { RealWallet, X402Client } from '../x402/client';
 import { MockMicropayService, MicropayService } from '../micropay/service';
 
 export interface AgentConfig {
@@ -9,24 +9,23 @@ export interface AgentConfig {
 }
 
 export class TransactionalAgent {
-    private wallet: Wallet;
-    private micropay: MicropayService;
+    private wallet: RealWallet;
+    // private micropay: MicropayService; 
 
     constructor(config: AgentConfig) {
         // Initialize Micropay (Mock for now as per plan)
-        this.micropay = new MockMicropayService();
+        // this.micropay = new MockMicropayService();
 
         // Initialize Wallet
         if (config.useRealWallet && config.privateKey) {
             console.log("[Agent] 🔐 Initializing Real Wallet...");
             let pk = config.privateKey.trim();
-            if (!pk.startsWith("0x")) {
-                pk = "0x" + pk;
-            }
+            // Prefix check is handled inside RealWallet now, but safe to keep or remove.
+            // keeping it simple.
             this.wallet = new RealWallet(pk, config.rpcUrl);
         } else {
-            console.log("[Agent] ⚠️ Using Mock Wallet (Check PRIVATE_KEY)");
-            this.wallet = new MockWallet();
+            console.log("[Agent] ⚠️ Real Wallet required for RailBridge Integration.");
+            throw new Error("Real Wallet required for RailBridge Integration");
         }
     }
 
@@ -40,15 +39,17 @@ export class TransactionalAgent {
         };
 
         log("-----------------------------------------");
-        log("🤖 Synergy Agent Starting (x402 Protocol Mode)...");
+        log("🤖 Synergy Agent Starting (RailBridge x402 Mode)...");
         log("-----------------------------------------");
 
         // 1. Initialize X402 Client
-        const x402 = new X402Client("http://localhost:3000", this.wallet, log);
+        // Pointing to RailBridge Merchant Server on Port 4021
+        const merchantUrl = "http://localhost:4021";
+        const x402 = new X402Client(merchantUrl, this.wallet, log);
 
         // 2. Execution Loop
         try {
-            log(`[Agent] 🎯 Task: Access Premium Content at /api/premium`);
+            log(`[Agent] 🎯 Task: Access Premium Content at ${merchantUrl}/api/premium`);
             log(`[Agent] 🚀 Sending GET request...`);
 
             // This single line triggers the entire 402 negotiation flow
@@ -56,9 +57,15 @@ export class TransactionalAgent {
 
             log("-----------------------------------------");
             log("✅ AGENT SUCCESS");
-            log(`[HTTP 200] 🟢 Content Access Granted`);
-            log(`Content Accessed: "${response.data.message}"`);
-            log(`Data: ${response.data.data}`);
+            log(`[HTTP ${response.status}] 🟢 Content Access Granted`);
+
+            if (response.data && typeof response.data === 'object') {
+                log(`Content Accessed: "${response.data.message}"`);
+                log(`Data: ${JSON.stringify(response.data.data)}`);
+            } else {
+                log(`Data: ${response.data}`);
+            }
+
             log("-----------------------------------------");
             return "SUCCESS";
         } catch (error: any) {

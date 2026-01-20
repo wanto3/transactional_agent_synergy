@@ -74,7 +74,7 @@ export default function Home() {
                         <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
                             Transactional Agent
                         </h1>
-                        <p className="text-gray-400 mt-2">x402 Protocol • Transactional Agent • Base Sepolia</p>
+                        <p className="text-gray-400 mt-2">x402 Protocol • RailBridge Integration • Base Sepolia</p>
                     </div>
                     <div className={`px-4 py-2 rounded-full text-xs font-bold transition-colors ${micropayActive ? 'bg-green-500/20 text-green-400 border border-green-500/50 animate-pulse' : 'bg-gray-800 text-gray-500 border border-gray-700'}`}>
                         {micropayActive ? "● AGENT ACTIVE" : "○ AGENT IDLE"}
@@ -120,10 +120,10 @@ export default function Home() {
                                 }`}
                         >
                             {isRunning ? (
-                                <>Processing Transaction...</>
+                                <>Processing Payment...</>
                             ) : (
                                 <>
-                                    <Play size={20} /> Run x402 Protocol (Access Premium)
+                                    <Play size={20} /> Pay RailBridge Merchant (USDC)
                                 </>
                             )}
                         </button>
