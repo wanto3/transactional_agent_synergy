@@ -216,16 +216,23 @@ export class X402Client {
                                     for (let i = logs.length - 1; i >= 0; i--) {
                                         const log = logs[i];
 
-                                        // RELIABLE CHECK: Use Block Number
+                                        // RELIABLE CHECK: Use Block Number AND Value
                                         // If the log is in a block >= our startBlock, it IS new.
-                                        // We trust startBlock because we fetched it from the chain right before paying.
-                                        // Even if startBlock was slightly delayed, any transaction generated AFTER startBlock
-                                        // must have a block number >= startBlock.
+                                        // We also verify the amount matches exactly to distinguish from other payments.
+                                        const expectedAmount = this.currentOptions.amount ? BigInt(this.currentOptions.amount) : 0n;
+
                                         if (startBlock && log.blockNumber >= startBlock) {
+                                            // Additional check: Does the transfer amount match?
+                                            // log.args.value is a bigint
+                                            if (expectedAmount > 0n && log.args.value !== expectedAmount) {
+                                                this.log(`[X402Client] [Req:${requestId}] ⚠️ Found fresh but ignoring due to amount mismatch (Log: ${log.args.value}, Expected: ${expectedAmount})`);
+                                                continue;
+                                            }
+
                                             const txHash = log.transactionHash;
 
                                             this.log(`[X402Client] [Req:${requestId}] ✅ Found FRESH Transaction Hash: ${txHash}`);
-                                            this.log(`[X402Client] [Req:${requestId}]    Log Block: ${log.blockNumber}, Start: ${startBlock}`);
+                                            this.log(`[X402Client] [Req:${requestId}]    Log Block: ${log.blockNumber}, Start: ${startBlock}, Amount: ${log.args.value}`);
                                             this.log(`[X402Client] [Req:${requestId}] 🔗 Explorer: https://sepolia.basescan.org/tx/${txHash}`);
 
                                             // Inject hash into response data
