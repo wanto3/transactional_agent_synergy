@@ -19,7 +19,7 @@ async function main() {
 
     const agent = new TransactionalAgent({
         privateKey,
-        rpcUrl,
+        // rpcUrl, // REMOVED: Using default Base Sepolia RPC to avoid env var conflict
         useRealWallet: true
     });
 

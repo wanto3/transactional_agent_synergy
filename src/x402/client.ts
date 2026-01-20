@@ -2,7 +2,7 @@ import axios, { AxiosError } from 'axios';
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { createWalletClient, http, parseEther, type WalletClient as ViemWalletClient, publicActions, stringToHex } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
-import { arbitrumSepolia } from 'viem/chains';
+import { baseSepolia } from 'viem/chains';
 
 export class RealWallet implements Wallet {
     private client;
@@ -11,8 +11,8 @@ export class RealWallet implements Wallet {
         const account = privateKeyToAccount(privateKey as `0x${string}`);
         this.client = createWalletClient({
             account,
-            chain: arbitrumSepolia,
-            transport: http(rpcUrl || 'https://sepolia-rollup.arbitrum.io/rpc')
+            chain: baseSepolia,
+            transport: http(rpcUrl || 'https://sepolia.base.org')
         }).extend(publicActions);
     }
 
@@ -130,8 +130,15 @@ export class X402Client {
             async (error: AxiosError) => {
                 if (error.response && error.response.status === 402) {
                     this.log(`[HTTP 402] 🛑 Payment Required`);
-                    this.log(`[X402Client] 📥 Server Challenge (Body):`);
-                    this.log(JSON.stringify(error.response.data));
+                    const payHeader = error.response.headers['payment-required'];
+                    const authHeader = error.response.headers['www-authenticate'];
+
+                    if (payHeader) {
+                        this.log(`[X402Client] 📥 Header 'Payment-Required' found.`);
+                    } else if (authHeader) {
+                        this.log(`[X402Client] 📥 Header 'WWW-Authenticate': ${authHeader}`);
+                    }
+
                     return this.handle402(error);
                 }
                 return Promise.reject(error);
@@ -160,19 +167,19 @@ export class X402Client {
             this.log
         );
         this.log(`[X402Client] 🧾 Payment Proof Generated: ${proof}`);
-        this.log(`[X402Client] Explorer Link: https://sepolia.arbiscan.io/tx/${proof}`);
+        this.log(`[X402Client] Explorer Link: https://sepolia.basescan.org/tx/${proof}`);
 
         // 3. Attach Proof to Headers and Retry
         const retryHeaders = {
             ...originalRequest.headers,
-            'Authorization': `L402 ${proof}`,
-            'X-Payment-Token': proof
+            'Authorization': `402 ${proof}`, // Standard Auth Scheme
+            'Payment-Signature': proof       // Coinbase specific
         };
         originalRequest.headers = retryHeaders as any;
 
         this.log(`[X402Client] 📤 Sending Retry (Headers):`);
         this.log(JSON.stringify({
-            Authorization: `L402 ${proof}`
+            'Payment-Signature': proof
         }));
 
         this.log(`[X402Client] 🔄 Retrying request...`);
@@ -180,13 +187,26 @@ export class X402Client {
     }
 
     private parsePaymentRequirements(response: AxiosResponse): PaymentRequirement | null {
-        // Strategy 1: Check standard headers (simplistic view)
-        const authHeader = response.headers['www-authenticate'];
-        if (authHeader) {
-            // Parse logic for header if needed
+        // Strategy 1: Check 'Payment-Required' Header (Coinbase Standard)
+        const payHeader = response.headers['payment-required'];
+        if (payHeader) {
+            try {
+                // Sometimes it's a JSON string
+                const data = typeof payHeader === 'string' ? JSON.parse(payHeader) : payHeader;
+                if (data.amount && data.address) {
+                    return {
+                        url: data.url || '',
+                        amount: data.amount,
+                        currency: data.currency || 'ETH',
+                        recipientAddress: data.address
+                    };
+                }
+            } catch (e) {
+                this.log(`[X402Client] ⚠️ Could not parse Payment-Required header json`);
+            }
         }
 
-        // Strategy 2: Check Body (easier for custom agent APIs)
+        // Strategy 2: Check Body (Fallback / Simple implementations)
         const data = response.data;
         if (data && data.amount && data.address) {
             return {

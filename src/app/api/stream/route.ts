@@ -16,7 +16,7 @@ export async function GET(request: Request) {
             // NOTE: In a real app, do not expose private key handling this way if possible, or ensure environment is secure.
             const agent = new TransactionalAgent({
                 privateKey: privateKey,
-                rpcUrl: rpcUrl,
+                // rpcUrl: rpcUrl, // REMOVED: Using default Base Sepolia RPC from client.ts to avoid env var conflict
                 useRealWallet: true
             });
 

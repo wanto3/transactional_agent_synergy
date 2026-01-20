@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { createWalletClient, http, parseEther, publicActions } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
-import { arbitrumSepolia } from 'viem/chains';
+import { baseSepolia } from 'viem/chains';
 
 // ----------------------
 // 1. Env Loader (Manual)
@@ -42,8 +42,8 @@ class RealWallet {
         const account = privateKeyToAccount(privateKey as `0x${string}`);
         this.client = createWalletClient({
             account,
-            chain: arbitrumSepolia,
-            transport: http(rpcUrl || 'https://sepolia-rollup.arbitrum.io/rpc')
+            chain: baseSepolia,
+            transport: http(rpcUrl || 'https://sepolia.base.org')
         }).extend(publicActions);
     }
 
@@ -106,7 +106,7 @@ async function runAgent() {
         console.log("-----------------------------------------");
         console.log("✅ AGENT SUCCESS");
         console.log(`Transaction Hash: ${txHash}`);
-        console.log(`Explorer Link: https://sepolia.arbiscan.io/tx/${txHash}`);
+        console.log(`Explorer Link: https://sepolia.basescan.org/tx/${txHash}`);
         console.log("-----------------------------------------");
     } catch (e) {
         console.error("Agent failed.");
