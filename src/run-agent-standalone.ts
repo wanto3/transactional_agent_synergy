@@ -48,7 +48,7 @@ class RealWallet {
     }
 
     async pay(recipient: string, amount: string, currency: string): Promise<string> {
-        console.log(`[RealWallet] 💸 Initiating real transaction: ${amount} ${currency} (Arbitrum Sepolia) to ${recipient}`);
+        console.log(`[RealWallet] 💸 Initiating real transaction: ${amount} ${currency} (Base Sepolia) to ${recipient}`);
 
         try {
             const value = parseEther(amount);
@@ -80,7 +80,7 @@ class RealWallet {
 // ----------------------
 async function runAgent() {
     console.log("-----------------------------------------");
-    console.log("🤖 Synergy Agent Starting (Single Chain - Arbitrum Sepolia)...");
+    console.log("🤖 Synergy Agent Starting (Single Chain - Base Sepolia)...");
     console.log("-----------------------------------------");
 
     const privateKey = process.env.PRIVATE_KEY;

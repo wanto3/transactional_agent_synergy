@@ -1,6 +1,6 @@
 # Synergy Transactional Agent
 
-A Next.js-based autonomous agent capable of performing real blockchain transactions on **Arbitrum Sepolia**.
+A Next.js-based autonomous agent capable of performing real blockchain transactions on **Base Sepolia**.
 
 ## 🚀 Features
 - **Real Wallet Integration**: Uses `viem` to securely sign and send transactions.
@@ -9,7 +9,7 @@ A Next.js-based autonomous agent capable of performing real blockchain transacti
 
 ## 🛠️ Prerequisites
 - **Node.js** (v18+ recommended)
-- **Arbitrum Sepolia ETH**: You need testnet ETH in your wallet. [Get some here](https://faucet.quicknode.com/arbitrum/sepolia).
+- **Base Sepolia ETH**: You need testnet ETH in your wallet. [Get some here](https://faucet.quicknode.com/base/sepolia).
 
 ## 📦 Setup Instructions
 
@@ -24,7 +24,7 @@ A Next.js-based autonomous agent capable of performing real blockchain transacti
     # Required: Your Wallet Private Key (with or without 0x prefix)
     PRIVATE_KEY=your_private_key_here
 
-    # Optional: Custom RPC URL (defaults to public Arbitrum Sepolia RPC)
+    # Optional: Custom RPC URL (defaults to public Base Sepolia RPC)
     NEXT_PUBLIC_RPC_URL=https://sepolia-rollup.arbitrum.io/rpc
     ```
 

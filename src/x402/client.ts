@@ -86,7 +86,7 @@ export class RealWallet implements Wallet {
                     logger(`[RealWallet] 🔁 Detected Nonce Error. Correction needed.`);
 
                     // Parse "state: 10" from error if present (Arbitrum/Geth specific)
-                    const stateMatch = error.message.match(/state:\s*(\d+)/) || error.message.match(/want\s*(\d+)/);
+                    const stateMatch = error.message.match(/state:\s*(\d+)/) || error.message.match(/want\s*(\d+)/) || error.message.match(/next nonce\s*(\d+)/);
                     if (stateMatch && stateMatch[1]) {
                         const correctNonce = parseInt(stateMatch[1], 10);
                         logger(`[RealWallet] 🔧 Extracted correct nonce from network: ${correctNonce}`);
