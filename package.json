@@ -8,7 +8,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:integration": "tsx src/integration-test.ts",
+    "start:merchant": "cd railbridge_external/facilitator && npm run dev"
   },
   "keywords": [],
   "author": "",
