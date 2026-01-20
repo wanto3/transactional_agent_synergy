@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"npm run start:merchant\" \"npm run dev:agent\"",
+    "dev:agent": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -38,6 +39,7 @@
     "viem": "^2.44.2"
   },
   "devDependencies": {
-    "@types/react": "19.2.8"
+    "@types/react": "19.2.8",
+    "concurrently": "^9.2.1"
   }
 }

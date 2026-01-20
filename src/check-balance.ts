@@ -32,6 +32,13 @@ async function checkBalance() {
     }) as bigint;
 
     console.log(`USDC Balance: ${formatUnits(usdcBalance, 6)} USDC`);
+
+    // Check Merchant Relayer Balance
+    const RELAYER_ADDRESS = '0x7621106919A7485daF135C1EE0216AaFD1AD144D';
+    console.log(`\nChecking Relayer (Merchant) stats...`);
+    console.log(`Relayer Address: ${RELAYER_ADDRESS}`);
+    const relayerEth = await client.getBalance({ address: RELAYER_ADDRESS });
+    console.log(`Relayer ETH Balance: ${formatEther(relayerEth)} ETH`);
 }
 
 checkBalance().catch(console.error);

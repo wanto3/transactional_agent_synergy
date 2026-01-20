@@ -5,7 +5,9 @@ build/
 .env
 .env.local
 .env.*
+!.env.template
+
 
 .DS_Store
 .gemini/
-railbridge_external/
+

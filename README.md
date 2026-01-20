@@ -4,38 +4,32 @@ An autonomous agent that negotiates and settles payments on **Base Sepolia** usi
 
 ## ⚡️ Quick Start
 
-You need two terminals to run the system (Survivor vs Merchant).
-
-### 1. Setup (First time only)
+### 1. Setup (One-Time)
 ```bash
+# Install everything
 npm install
 cd railbridge_external/facilitator && npm install && cd ../..
-# Create .env.local with PRIVATE_KEY=0x...
+
+# Configure Env
+cp .env.template .env.local
+# Edit .env.local with your Private Key(s) (Agent & Merchant)
 ```
 
-### 2. Run It
-
-**Terminal 1: Start the Merchant** (The Seller)
-```bash
-npm run start:merchant
-```
-
-**Terminal 2: Start the Agent** (The Buyer)
+### 2. Run
+**Option A: The Easy Way (Recommended)**
+Starts both Merchant and Agent in one terminal.
 ```bash
 npm run dev
 ```
 
-Then open **http://localhost:3000** and click the "Pay" button.
+**Option B: The Robust Way (Debug)**
+Run services separately to see cleaner logs for each.
+*   **Terminal 1**: `npm run start:merchant`
+*   **Terminal 2**: `npm run dev:agent`
 
 ---
 
-### Verification (Optional)
-If you want to test the backend logic without the UI:
-```bash
-npm run test:integration
-```
-
 ## 🛠 Features
-- **Strict Verification**: The agent checks the exact **Amount** and **Time** of the transaction.
-- **Raw RPC**: Bypasses caching for guaranteed freshness.
-- **Request IDs**: logs every payment with a unique `[Req:ID]`.
+- **Strict Verification**: Checks exact Amount + Freshness.
+- **Raw RPC**: Guaranteed blockchain data accuracy.
+- **Single Config**: One `.env.local` for the entire system.
