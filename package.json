@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "next lint",
     "test:integration": "tsx src/integration-test.ts",
-    "start:merchant": "concurrently \"cd railbridge_external/facilitator && npm run dev\" \"cd railbridge_external/facilitator && npm run test:merchant\""
+    "clean:ports": "(lsof -ti:4021,4022 | xargs kill -9) || true",
+    "start:merchant": "npm run clean:ports && concurrently \"cd railbridge_external/facilitator && npm run dev\" \"cd railbridge_external/facilitator && npm run test:merchant\""
   },
   "keywords": [],
   "author": "",
