@@ -1,0 +1,2139 @@
+
+> railbridge-facilitator@1.0.0 dev
+> tsx watch src/facilitator-implementation.ts
+
+✅ EVM Facilitator account: 0x7621106919A7485daF135C1EE0216AaFD1AD144D
+🌉 Cross-chain EVM facilitator initialized
+   Cross-chain bridging: enabled
+   'exact' scheme: same-chain payments
+   Cross-chain: Extension-based routing (any scheme + cross-chain extension)
+🚀 RailBridge Cross-Chain Facilitator listening on port 4022
+📡 Endpoints:
+   POST /verify - Verify payment payloads
+   POST /settle - Settle payments on-chain
+   GET  /supported - Get supported payment kinds
+   GET  /health - Health check
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768893612',
+      validBefore: '1768894512',
+      nonce: '0x89f50c91ac45a2519a5f315d47fafc58d650aacf6b758f34f0f8e9b3d49dbca8'
+    },
+    signature: '0x6b3c47ed8e37a30461370ec981e2eb64a1da6f1dc20b108fc116968aaabf975d513f390dfac64dd3586b47905733a8d0927e02d6cd867a7e974c12e2fc62a3131b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xd508020b131a94d60753a2ab45f5094596973716e0ebb45beda1062b9dd668c6',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xd508020b131a94d60753a2ab45f5094596973716e0ebb45beda1062b9dd668c6',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768894115',
+      validBefore: '1768895015',
+      nonce: '0x8a981f5cbbac5f41f45e8f5f55cdad227a5c726e42dfd8ad2bbc86f0dc661054'
+    },
+    signature: '0x22ff903c436c1df4bf77d0ba9b222014f21c775044b6353d6ece41b717ce054b776f4c6c529c88844482e76ecf734f008b8bcdb64c17e5db30bb8a2d111246b71c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xe84b91ee5fe317c3d695f50b10401a8e1ce82011169b1656f488c1dba418d447',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xe84b91ee5fe317c3d695f50b10401a8e1ce82011169b1656f488c1dba418d447',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768894223',
+      validBefore: '1768895123',
+      nonce: '0x98173d52defbdece298d219036de2464c17d547f7d9b399ef24189f06ab9ce98'
+    },
+    signature: '0x81254b9468b8064180490a48713492985dfa202e45053241cc77d8b26003e94c117cb0a1c94ff1e1705b6316b35177fc5886b97674396fb7311e1d5c330c38961b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x77c76e8798a96bba39ecfbd8543713aed5f9b5d683e11876e1168c8e8c2ebaa8',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x77c76e8798a96bba39ecfbd8543713aed5f9b5d683e11876e1168c8e8c2ebaa8',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768894472',
+      validBefore: '1768895372',
+      nonce: '0x66fb6f43e3057a19678661b4cdcceba2a9b3258b4fc87a35b1c7379098b5f993'
+    },
+    signature: '0x35e91aea6c042351d3332dc7fc7f0cf20236583551e668887cdc6e2a68ea477525da6e7972c0172979e59c315c9099637bfe3be233e4767da022a5fbd7f697931b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xf86bc0106d20e339dbbbf185f3fbf51c026b6b4de7fda56585dd9e0d63eb1a45',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xf86bc0106d20e339dbbbf185f3fbf51c026b6b4de7fda56585dd9e0d63eb1a45',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768894783',
+      validBefore: '1768895683',
+      nonce: '0xf3054c32d9237d2b7c8481bd2d5c2489d41d9795245a4f9a0cdaa1bbfcafcc8a'
+    },
+    signature: '0xc99f77f91e6ced607db81b97c91e1cd862b8135d4edf6e5dab3a73b32caddc53788c4686cbb90c4c3d4e6c5c7d71b309bb41e7cdf0974c12993967b6fade019c1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xda63b912df5e8ee5e127ea8b31d629096725f707997f26933f881736c3f91712',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xda63b912df5e8ee5e127ea8b31d629096725f707997f26933f881736c3f91712',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768895255',
+      validBefore: '1768896155',
+      nonce: '0xa2a9b9dbb41e33640a2ca2c1a4de877be8a747ebcd31ecd0219b695374001b3c'
+    },
+    signature: '0x710b647b9c4e61c7141222a5ea241075b241529cbb237cb0614926d2212a5fec1dbfc7fef97768dd8d526f81d78b535e394769255e5c41cc214a27626c43357f1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xe2318b11f42ff9a847240cbcf519449602ec7e392bdf0936bf361500d18046cb',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xe2318b11f42ff9a847240cbcf519449602ec7e392bdf0936bf361500d18046cb',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768895474',
+      validBefore: '1768896374',
+      nonce: '0xece21f4a36e8202aab2e86ecd6694ab2b0f85f0db808f4a316038dbd551c839f'
+    },
+    signature: '0xa650c26b12edfa2580f51bf88f4003dcb04b93256b77ae1ceec97e27827c162c63681ee1b3439dbc139bcd5c42f1b6c36e3c93b8bef2c7a28f0d4ea216dcff761b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x165fec91dec412a5cbc0f44d3439e7c1561c82a4845369da0c9ed279f1a35c63',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x165fec91dec412a5cbc0f44d3439e7c1561c82a4845369da0c9ed279f1a35c63',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768895798',
+      validBefore: '1768896698',
+      nonce: '0xd1be639a56d24f80560c3126615a5e275ba60c338d5b96b802adca665ecf5502'
+    },
+    signature: '0xfc4ef6c414f2d87a7601cca350ce4a7c783bb1b4a717c2c49f0a6be7b69d8d1576ae07840813413b266cdd6145cef0327197be3b56edceb220e1030e2ee8f6cd1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x71859debd7763f88c9a6a7c60e84e3febc48d5ac2485151a10b54e49ff8233fc',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x71859debd7763f88c9a6a7c60e84e3febc48d5ac2485151a10b54e49ff8233fc',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768895818',
+      validBefore: '1768896718',
+      nonce: '0x4f7026f6fc11253068ed354a9e8dc9e6508b8c79359b19767ae624044cf0fc83'
+    },
+    signature: '0x782744700dd9a6aa83370abe9b9b03ce8e59177620fc34f408971c478da351e70b5ad5ed40e5b0bd115ecc61593e44391097474f30e5d434bd224d3cb89c114b1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x91f9e79525916e97effadf8d729666e0ce83167411aa3913dfd090003f70a73d',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x91f9e79525916e97effadf8d729666e0ce83167411aa3913dfd090003f70a73d',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768895950',
+      validBefore: '1768896850',
+      nonce: '0xa608f1e6029346fc129eee4c626de176e59461084322e1d4ad61ac2549000034'
+    },
+    signature: '0x94c5636955ed0c78bc1f2fa0009da0a32c166b89b6fcaf584fc222b936ccea2b77c75f0d470e32b356316cd6eaa417a12e724a75f03979324f238203a5568df51b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x1f728bade4599221321aabd697c37d6bb7596a5fefd914b8d7afa38d3b728a59',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x1f728bade4599221321aabd697c37d6bb7596a5fefd914b8d7afa38d3b728a59',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896074',
+      validBefore: '1768896974',
+      nonce: '0x19d7b5fb2be553c2bbd7d816cf55a27fa51c2ea52bed95afeb81ae04bd9b8ef8'
+    },
+    signature: '0xe40fe36d830aa05a84878c79786eb86b178d2de26876bef12d475c30dfc351b47981d59af70a4dc5a896dc77c26def1f511119b4fc269978a4697be69edc14971b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x077c6eba6aff85426f11d18caf27054d66c90f3e37c70b8a94e9f43ec7ff8cd0',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x077c6eba6aff85426f11d18caf27054d66c90f3e37c70b8a94e9f43ec7ff8cd0',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896413',
+      validBefore: '1768897313',
+      nonce: '0x783b593098c315109fc7578f23a00882b313b1a7db5b9b635cd26fdc33efe6e5'
+    },
+    signature: '0x5e8c8c2fa85b67f606d19f6cf28a28a2955937d8333904ea927094f93f5cd608491a6d201ae1c077e2f70399806a142ab4f783acf61651f5497a08f39d93cbc01c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x8891116b5b88a998d12eda2982caad6c4c4118ef559844a0159cd2796ff99e93',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x8891116b5b88a998d12eda2982caad6c4c4118ef559844a0159cd2796ff99e93',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896562',
+      validBefore: '1768897462',
+      nonce: '0x90e22a9db2396e0607ea70bdf1e0bc0c671792c6e73318cd7be5ecd37362ae4c'
+    },
+    signature: '0x67549f41ececb933d39dfbc22fdfb141468e6c1014874e9cf8db6ac56ed67c870ad7f2cb25ffe3aa87cdf154c213b821c3319727eb3e9531ff99a61020e25bd11c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xa18209450000daf368b19044cd9d0d7072c83014ea2b1a8ca9d97504b31fe5fc',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xa18209450000daf368b19044cd9d0d7072c83014ea2b1a8ca9d97504b31fe5fc',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896782',
+      validBefore: '1768897682',
+      nonce: '0x5e201c06560c63ce33a2f70320fd0cc38673e2297ca19387d8e8b8f2f9fd6162'
+    },
+    signature: '0x5a7c7482b8bf7aa2f5f633d912a90d028feeb812d57740a2c5e23afba719d6a91f94d3da63b7be0d5c15aeb8679ec73f869e710672f8284fdfe2a2fcccbdb26c1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x3017012a3e83a7fc4678145cde909bf5de8c1f764020199208adf226759dd06e',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x3017012a3e83a7fc4678145cde909bf5de8c1f764020199208adf226759dd06e',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896810',
+      validBefore: '1768897710',
+      nonce: '0x5ac7e4307fc5bdb1f8dd7b1ede5fcce5043c23d9a9b99e231a8632d517a8bf8b'
+    },
+    signature: '0x77faee2992f4fdb3ab798981ad1d59fbfffd8b653776bd906c813ea541c6cff24144e7008bd69b11fd952db6902b7c263948b0f182640a59e4fccc5eaaeacf4d1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xdeef24ed63c11c803e1542992eb3112d52d11e7748b806042f62c98dd4b911fd',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xdeef24ed63c11c803e1542992eb3112d52d11e7748b806042f62c98dd4b911fd',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896837',
+      validBefore: '1768897737',
+      nonce: '0x31031852968d2b23d6478de3cd0cc9a7f7a5ff09083840e03a5bb6819d6da945'
+    },
+    signature: '0x18bcd1f33dc58ad7303f01cae56002bae3498edd71039c462a7225c2d2b4175307173b625c23a1711f70ec1d4cd3cd72e2f6e316ef0bbc4284a51e37c27a54411b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x22dadd0be9a97f4e6441f97fa286f2749bb13921c90ac28dad53368cc527d9b3',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x22dadd0be9a97f4e6441f97fa286f2749bb13921c90ac28dad53368cc527d9b3',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896873',
+      validBefore: '1768897773',
+      nonce: '0x33d7714a9cf69ca0b6e1569da010d9d93d72dac8fc595b542fbd89ae7dfb20a9'
+    },
+    signature: '0xa229b2b4fd99ba8ef5edbb70dc838f06b6867f4d3a45ceb033bcfccf9e1d5abf430fb9a68c0c316b76a2a80337a99edc46b04c1ed9b732a74632850ab0da071d1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xe4422456fc694db7797cd14731a3b776c528e8cdbe25d3500f9165f56391d803',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xe4422456fc694db7797cd14731a3b776c528e8cdbe25d3500f9165f56391d803',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896891',
+      validBefore: '1768897791',
+      nonce: '0x05c759cf275a4bede9d38326b24094e6cf940a823471a9ec1937a6c43391fd4e'
+    },
+    signature: '0xe46c13ab27a2a980e73f284f074cb1f0a90c4654c951263626f99febe14fb35e13b525f484c1e354d29a9a5961f1ab0b8e668971b1b971b10c7921c645240f791b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x7e807db4f426b43471bbd3c079aef0d9434caf7971b81e66b4bcd39ec63b0449',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x7e807db4f426b43471bbd3c079aef0d9434caf7971b81e66b4bcd39ec63b0449',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896909',
+      validBefore: '1768897809',
+      nonce: '0x98cc4dcc7099509afa2d91f5fe1f873a7c33c4f0597e4a270f678243f63f0118'
+    },
+    signature: '0x47bc6c8cfab5e98e69cb1209c40eb5be69154df640ae6ac3d404b25d9ed1f71a7cb631c46985eab1d16dd2ab4e424746fe3344dada2a5dd46595a1bd85f3347a1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xdf2894e3c2c8bfa1d019cf0978af07299602c2cccf4296677f12ce6b3b19c067',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xdf2894e3c2c8bfa1d019cf0978af07299602c2cccf4296677f12ce6b3b19c067',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896936',
+      validBefore: '1768897836',
+      nonce: '0x562641a1a500c9b3c243ebafc0c3da409c83bd000d383ea1de42503e10f38e8c'
+    },
+    signature: '0x0a378ccbefc03c6fcecc183e58967e7e22f6a0a85f3cb10715b23ba4028dd66c09de73f276c8041bcd18810a5822ffaf3e37a5def4cc19492fc645f41111f5dd1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x6aa238f4ce4f6c04c89650d455117fc9d91172fcad038b8aabca59cecc95e19a',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x6aa238f4ce4f6c04c89650d455117fc9d91172fcad038b8aabca59cecc95e19a',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896962',
+      validBefore: '1768897862',
+      nonce: '0x9ab3a699e6398fbf74b00fd761d9554cd6935ac090372c6bad1ea16713512037'
+    },
+    signature: '0x41ee208a8e45fefb140908c3b01cdc889049989ae32d3b02a4147e83a92ccc351a6bec710f448070681bdcf8e26bb986e822df268eb916379f3f3e8c25456b8d1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x59d917c08226fba309fae3adf3ff48d3b1b7462176b7aa5b0b696eb65a1a2a24',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x59d917c08226fba309fae3adf3ff48d3b1b7462176b7aa5b0b696eb65a1a2a24',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768896985',
+      validBefore: '1768897885',
+      nonce: '0xaf10120a2821be9e8ce15f96fb4ba0f7259ab1cf9068bc913b6e09cb1f95b9ca'
+    },
+    signature: '0xdc5e8d556ba274705deb9b0f727b8a941a692fd8a6246184fe1d36f3df4af8fc2a7bb019ea847980948a6db3cf3c68570255cdda2198cab4791383622595440d1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x985954d48978f32b54d075070dd641ad67e5502b00921016c2ad17eaea0b30e4',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x985954d48978f32b54d075070dd641ad67e5502b00921016c2ad17eaea0b30e4',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768897032',
+      validBefore: '1768897932',
+      nonce: '0x2c09892c3a61b2df3e20d4871a9c4faf66856319ad4bd54a3c281213d3c1684c'
+    },
+    signature: '0x0f036c37860210a12f4e2442234cb8e29745a4fd863822303fd19ddb816af78c24c9fbe3364c336d8fba42e86f4fce063abb2edba29a0b95be5861a3b56ae0ae1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x51b668916a5f3a83921bc6c5815eebabce4a472d0cdabb8a22ebbe1e8a8016a6',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x51b668916a5f3a83921bc6c5815eebabce4a472d0cdabb8a22ebbe1e8a8016a6',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768897049',
+      validBefore: '1768897949',
+      nonce: '0x73499494d63e69d3269c2b070b8fc886fd8b56392d98b402241f992d850a6727'
+    },
+    signature: '0xe35da57523bb729f4a6d25b715a107be2aee3bbb73cd4582dd454e97c8a231d20f169d3852a02fdb69fb144a5689a0f55346b6ecba643fd000b7b1d5f74ec83f1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xe37c7dbcb0bc9b2c078cc61f617d7f8c2abef7639701833f4147a8f33868797e',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xe37c7dbcb0bc9b2c078cc61f617d7f8c2abef7639701833f4147a8f33868797e',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768897226',
+      validBefore: '1768898126',
+      nonce: '0x25bfbfc93cc61c59c55fe9f3eeceb744c24654f2634508fca4cce51abc58bc00'
+    },
+    signature: '0x7f513c0aa7857f2c4f0c346bf2885009c6abd8adb9e551d476fcf8461d7a0d23772c0ce9104045e91b024dd8b657586c442843313137770bfa0f0e60305f90801c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xc271106f4ec3441a2d9cdbe921c38e22e19600e1591edac24776e6bd9a7f381a',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xc271106f4ec3441a2d9cdbe921c38e22e19600e1591edac24776e6bd9a7f381a',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768897250',
+      validBefore: '1768898150',
+      nonce: '0xb39641b495b3f869fff24bbe8ba2e48a67ad47397e4748f7e734085f203ed6bc'
+    },
+    signature: '0x6727cdb77b8d4ebddba6a50341d09aced639346671f071d21a004311609033b928e501c256553eaa99095a956c968efe8359818ccf67de7c305a1e5e40ff0d741c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x173c0c2a28947ace979be6890bf31715143f1fdd0e37aab183cb6eb6bf24cd1d',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x173c0c2a28947ace979be6890bf31715143f1fdd0e37aab183cb6eb6bf24cd1d',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768897284',
+      validBefore: '1768898184',
+      nonce: '0x4c1518edc787e5e1ce5faec2e318873c3ef340c6fa3ffa5302ce2fd841063077'
+    },
+    signature: '0x68dcbf869576c9bd23400db2b18b7d2778bf0f8241a425e8900e0456d79cb6110ae829cca7a91f51787102ccd6551d9b1cf7c8dc88fea289f6ace016b8d63bd21c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x32db03f4a461a8fd54231876a1115b2eebd4e362b314d46dea64e6a52e1e1107',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x32db03f4a461a8fd54231876a1115b2eebd4e362b314d46dea64e6a52e1e1107',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768897787',
+      validBefore: '1768898687',
+      nonce: '0xf08bd6b30181ed47412bbcdc60ede29c887a9a81f6e5843e5f185d8053a9656a'
+    },
+    signature: '0xa0ecd60dbd47c69f86f1afa31382a718ef321a0120ab9f2a04cd9b425b0d849407dbb92827ed26435ac56b59de324a33d08ada86657058b96c0f5767a6489aad1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x5d307b58e2945efea581f2e30977b64b8627ab3b578331bd813edaf9b9f6ce0c',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x5d307b58e2945efea581f2e30977b64b8627ab3b578331bd813edaf9b9f6ce0c',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768897932',
+      validBefore: '1768898832',
+      nonce: '0x772f0b527a0f8111d20d81ae361b7ca436630fa9e41431155233d39882de5ba8'
+    },
+    signature: '0x1b9a47301497d0b831b8145864e18f39faab21778bbfeb0a0ba735e5c6d117a1640688c474c162f198993729ed63ab722ab108342fb2755c3a0579930d0496321c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xa4b804a07c00de48de89cb82d9c94e7d36c0e99163b0bc51fe6c1f6bb3f01b0c',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xa4b804a07c00de48de89cb82d9c94e7d36c0e99163b0bc51fe6c1f6bb3f01b0c',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768898093',
+      validBefore: '1768898993',
+      nonce: '0x6245670369f942a8932c17d6bdcb15fac065d1e8d4a3e318cb46ee28f21fe533'
+    },
+    signature: '0xf4c38b40d6df0f56d056353d2d384d4ae6a554f356a0d6f4de7a9e2a13e878af30bbe2438b329443f1669c01fd73b5a50b82adf499e0028c93a64d0fd14e22331b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xdd5d14ccf1926a3ce86da822c026100a61c247101fcdf35b97ab824d3023a6d3',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xdd5d14ccf1926a3ce86da822c026100a61c247101fcdf35b97ab824d3023a6d3',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768898133',
+      validBefore: '1768899033',
+      nonce: '0x107f15d1ac975a695e6649915684acc03f5ee7de58fa222ce5d1977c46265705'
+    },
+    signature: '0xa053fe7aa543908c0d263b7b9c2860821793b57770f33c3df5077b4f22851c8a28e87fdbc10c45abb5bd13c566ec99c1effe06157b27b0164756736cf7ddeb091b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x6c47381ad9822a16c47a4427ae3e7a35acab188a859119380c1052f67819fa9d',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x6c47381ad9822a16c47a4427ae3e7a35acab188a859119380c1052f67819fa9d',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768898175',
+      validBefore: '1768899075',
+      nonce: '0xaed7bb067a3d155f79f62a2ec45fbe99fefff28cfb70590a2c06f0d7d52524d6'
+    },
+    signature: '0x1ab2eaa12bc48ce53ceffbf311cf5af19313d874a6fc8f4f90fc4a06bef5286a4f05a35fdf07acc45e49874bbf547be63534460e16b95b439f5a0a4756482a651c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x5156f3dc18bd1241bb11eeb28e5c8c855f85536856bc611b96bfd68cf73fcc11',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x5156f3dc18bd1241bb11eeb28e5c8c855f85536856bc611b96bfd68cf73fcc11',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768898214',
+      validBefore: '1768899114',
+      nonce: '0x34fafd5194773b87d2aa45e51d4777f11bcec2698d74e813e02ab925569a69a8'
+    },
+    signature: '0x7fc03b2979001f6c5db210e74aa0df58093eddd248742760d91f75fd054a7a395dbdc240841a359c0b11fb760ff8bf79a07744ef262e45ef8a741eefcb66e8631b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x369b5f4e35ae652b198ab26e0670308a5547691161ccc81902c1b5e52b25ff87',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x369b5f4e35ae652b198ab26e0670308a5547691161ccc81902c1b5e52b25ff87',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768898254',
+      validBefore: '1768899154',
+      nonce: '0xc46d34a52701dc7189baa0da0ea1a7265ae009d6db387c34fe92b60ce7d3ccf9'
+    },
+    signature: '0x750414e87859580d2641b9c0f1a861c7b2624c112ee84d292bdb3a4b19ec7dad104274fc5649855f1b152fe937e1f7f32b8731a96d1bd27ae4a66ff70f84f5c71b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xdaef904b8dd4982c58fd34322276d35f5f8da3c759ccf47f794df8faeaf1e58d',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xdaef904b8dd4982c58fd34322276d35f5f8da3c759ccf47f794df8faeaf1e58d',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768898318',
+      validBefore: '1768899218',
+      nonce: '0x75dbba220c6cb3a08b1c00be26a0a3ea87aa40c4b986a3c5ae71d0222b3d6e86'
+    },
+    signature: '0xaa7b9310467bfcb524e3c126e8c5a7802fd587914661498e4477cbd9183adccb067ccdb4f42912d39098ba68ab43b2859ce6a8532a4293a212701d603755df1d1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x7d6e8d68133bde2635e5af3bae43b58ca62cea6d93c1efac30729767b229f0f4',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x7d6e8d68133bde2635e5af3bae43b58ca62cea6d93c1efac30729767b229f0f4',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768899752',
+      validBefore: '1768900652',
+      nonce: '0x428baafc7e20470c647f851ef31d42a09ca4d6314002386e1f9d8c68300996ff'
+    },
+    signature: '0x832dd0b538140986bfbb0905495205f3b2a60bee5a8ea25d6b59267d12041f8d29644b9734b5cf33fb683506360fb4bcb59a2bf9c33aabe0f855a04fd7192ffb1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xe87e5aef068bb66c64110ab6186ff32284d5671800010ec96f56578fb8a1ab41',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xe87e5aef068bb66c64110ab6186ff32284d5671800010ec96f56578fb8a1ab41',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768899824',
+      validBefore: '1768900724',
+      nonce: '0xd375120cfeba1d81222a852c090bbee1dcb90afdd541f1df6b8be7a4a7a36c60'
+    },
+    signature: '0x2eae5c9e17809a9d83ff137d1bbff640358e48cb31c0ef3906b065dfcf99dfde16abe508cbc9ce55da460aec148a8fc43a2792c0512a0d632fa0569ff1bb1f801c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x8d9516b46a6bdd41a94481200cc498ae065a7d1a7db6c5809aba2022cdc34b25',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x8d9516b46a6bdd41a94481200cc498ae065a7d1a7db6c5809aba2022cdc34b25',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768899891',
+      validBefore: '1768900791',
+      nonce: '0x3c461318550994eed545beb879429c12b02c480e529f7a5fc82318aa2af88c0e'
+    },
+    signature: '0x0530e50295c96c993bfc0a2586214d308bb0ba9013a0c1105d710607928c29122c111c2deeb83d54064cf4b94370c9f2122baaa50adbe60029fdd4462f0187071c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x0db91e1950e29d0664b3ec77f14fcdf74f840169acbdc79c177505d559884e15',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x0db91e1950e29d0664b3ec77f14fcdf74f840169acbdc79c177505d559884e15',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768899948',
+      validBefore: '1768900848',
+      nonce: '0x5476ccd5023f1f624bc3ef7c4752c38e827203c3fbcf43b3f3a107a05e94df1e'
+    },
+    signature: '0x64c7a9f9b02f4d95cc0df2f38db97845f695de11ef0523b9484eb178fbac9af350f2f82b6c3f61118f5140406c8c226381a66a7eca339415461d148c5d2002d01c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x60665d962bfea15402a6e32313ed366aa40483a25eb267f3435d57a0f1958c6b',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x60665d962bfea15402a6e32313ed366aa40483a25eb267f3435d57a0f1958c6b',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768900008',
+      validBefore: '1768900908',
+      nonce: '0xf61489208961527fb8feab1f70f455b87d53edc18bcdd60ae42ae91559e763f6'
+    },
+    signature: '0x6b73e0aa9641566f5f93ea815fb0cb9fbefd3a7bf8e1ee056fac95e6f1126d855de3820789a300c035604c1074cf1c8bad5bdd075fe679d6376c8a2eb9efb12d1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x8d2237a8dac099969018ba01e8327851b6b5aad9563ff0a6022121b13e0edf35',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x8d2237a8dac099969018ba01e8327851b6b5aad9563ff0a6022121b13e0edf35',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768900252',
+      validBefore: '1768901152',
+      nonce: '0xf87760229efa309d8434b39f0da2d312eaced32944364f9fb65f78c4c5ca886b'
+    },
+    signature: '0x6e1de5e2c2d8bd7e1dac08b03a25656e465082ab4901ce489ff0230fc5c507361202ff871fe68072fc83f12e602dcb923f8d8f0d863e32dced5911e6813e7e0c1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x08412f1653fdbdf9cca1cdab9340faa3b4dd26b8f3cf1f885e0c37f41f1cce08',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x08412f1653fdbdf9cca1cdab9340faa3b4dd26b8f3cf1f885e0c37f41f1cce08',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768900433',
+      validBefore: '1768901333',
+      nonce: '0x10efb8fa56d5a536dbc3fe6f84bb75f6f58a7bd3768fae661bf74538a1150bf4'
+    },
+    signature: '0xf268bdbba3a79ff4f91c60c3ee3af1369fd5e272b20de85e65a4d705adfa3f513e4e8b7d5d9abe90f35e68f2e9003f0d742077c3fc308ef4d988fa1b950250c71b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x035015d647b4b6bc1a308ed0ebc1efe219b1197d6e495aadfba1d4ac41ded63f',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x035015d647b4b6bc1a308ed0ebc1efe219b1197d6e495aadfba1d4ac41ded63f',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768900675',
+      validBefore: '1768901575',
+      nonce: '0xe9c71df0fb3c824895816ceb31578c0cf90fe087a09ad1316e81bd8c7fe982b6'
+    },
+    signature: '0xf0e3a561e72c201904d074d38f0220613be0a6200e547f29fe25de5aa6f964ed7a74dd827ed1a611ac235770eca51cad5a217cf383df542fa4bf76cefb9a4c561b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xe1fbec2e9795424d31ca151456498668cedc4efb8033610ecc7894eecbea4d9e',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xe1fbec2e9795424d31ca151456498668cedc4efb8033610ecc7894eecbea4d9e',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768900932',
+      validBefore: '1768901832',
+      nonce: '0x343b08f2e42cb8040810966ed3ff7f4e8efd44ab1f2e64d2090ddd1542b0ff85'
+    },
+    signature: '0xd9a2594d58930b5ffc75729f2bc3cff06105cac4317ad6a0084d7321f3c032ea184198512d7c93344699c638c440b09aafd3f9b5f4ba8a77dca4a473f2003d251c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x21633d97c31d6dbe6808bd7bc57f1b1ca93d2e3e04296bfb5ea2d06c5a45cdfb',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x21633d97c31d6dbe6808bd7bc57f1b1ca93d2e3e04296bfb5ea2d06c5a45cdfb',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768901035',
+      validBefore: '1768901935',
+      nonce: '0xa30c7fd733e1cb3d312fbc18d48c6cd9c8ea1e98f4ed1069e4aeb206273828d3'
+    },
+    signature: '0xdcf929e98d41ffd390da66271540a0c0c163932262b7a8de7996beffc9b711695a342bbdbb130e4689a4244b9da20811829fe8cf85a78878c8ee6342bb4740bb1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x2d40f7c597ceec4802144008f4b92e00dcf98c65b9e75c9463a016e639b3bba6',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x2d40f7c597ceec4802144008f4b92e00dcf98c65b9e75c9463a016e639b3bba6',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768901254',
+      validBefore: '1768902154',
+      nonce: '0x1f9b63df01e35177195fab3de616296ed7f34c274916f91858e71841fdee1b3a'
+    },
+    signature: '0x6fcebcd6e757ca2fb81776ffab66652140db76057f550952bd9be4167caedf2d4d20ac5cd211126890af5e0b1e78110cfea8adc9ceaa08ae2ad1934bc8a2420b1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x4c1d02aa23991b7ac9650fbb31bbe4abcb686628108eeb59e8a99897f2817e85',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x4c1d02aa23991b7ac9650fbb31bbe4abcb686628108eeb59e8a99897f2817e85',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768901391',
+      validBefore: '1768902291',
+      nonce: '0x8ab5a0434fd4eb052f4b57fb50ca8774b06920e03800296dd1e86229c0006520'
+    },
+    signature: '0x6001d6d4878ff747a87c227e04d9d2c3001564a51c762dbb5788ec1a25e7c79e7f524471f33d127cbdcec988691bdafe697aedb92085c9276700935df82599221c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x601996dd2760483726d85ed7bb8e42796b8a6d9b07226b9b2ae34611f1634798',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x601996dd2760483726d85ed7bb8e42796b8a6d9b07226b9b2ae34611f1634798',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768901810',
+      validBefore: '1768902710',
+      nonce: '0xe6f45050cd38a92f4796734ce6fb2a3a1e5043e6d885f91aed184761d3f0c234'
+    },
+    signature: '0x0e0188f62f335349bacc96059a61ce2b41bd2e9380b223479255f0fd3cc58d4a342fc4a33db8db2278559130514d500d426a1cfaea229cc1450770dd754c59791c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xce3a5973fd8469b28bbe99048963d5dc2eac750fdeec3e2fe6ecd690cf8bbf20',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xce3a5973fd8469b28bbe99048963d5dc2eac750fdeec3e2fe6ecd690cf8bbf20',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768901849',
+      validBefore: '1768902749',
+      nonce: '0xadf712186f4297e9f3238f78b41abc4c88da49f973b7c2ca9c19b6e4bc8bda7e'
+    },
+    signature: '0xefe78ac851c2f7485b49e3a64b18685966a7f2aa0abe3caf3700258d841868512ec85eb83bea48bab0bab5441ed498f9dda5d2175583ddfb264f7aa4fc5ad91b1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x1a8d4d1ccd1dffe784037ed2986e357456e33626ca3afcb2f042f046ed6df379',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x1a8d4d1ccd1dffe784037ed2986e357456e33626ca3afcb2f042f046ed6df379',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768901891',
+      validBefore: '1768902791',
+      nonce: '0x1c59a321c553ff4d2f51f2865fc9dd66dfce869c1f53b30b04ea38d6e0971906'
+    },
+    signature: '0x831e40ecc3842d73d5b89168d813cf86378864465b218df8cc8e1d75367cbec027665b02e5c33202be29aa2dc359d7641058eee833baab5ca05b986296af4f2b1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x7d3bf343c17a55b4d00fec7cd8a1c60c5bf81abc91c5c9c4e7ec623fdd471efe',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x7d3bf343c17a55b4d00fec7cd8a1c60c5bf81abc91c5c9c4e7ec623fdd471efe',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768901912',
+      validBefore: '1768902812',
+      nonce: '0xa68dd0ada6776a2deef4e4648de7409501a6295d81e53e7b640deea6946826cb'
+    },
+    signature: '0x3fdc65ad52cffcfc15c73af6cc24935b29a99c34111f8a0b1e2f4a3d354de1ab3c7c886ae1d058a6e1b97e52ccf8e3b323a1d5b2aa1eb2f2acd58ecd4061da5c1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x98462b25a4fe23a44486790bd225fcc06d7ba09910c321730f497b6da539c8f2',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x98462b25a4fe23a44486790bd225fcc06d7ba09910c321730f497b6da539c8f2',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768902654',
+      validBefore: '1768903554',
+      nonce: '0x8fdbad8bcd4fb789fce5343cd8a75b0c563876c9de106dad89eabc9fca463f4a'
+    },
+    signature: '0x408a3ed11f4beadbacdb684c4d6292b00daacfd29c685a03770fb7db19412f030a1daeb887d8c7a44d152cd1360af6e0d907b4db49817280aa28827495d9a84d1b'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x8445b98d772c6d5d1222e7f3375ee938ede460dbc812926404989a09dc854266',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x8445b98d772c6d5d1222e7f3375ee938ede460dbc812926404989a09dc854266',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768902736',
+      validBefore: '1768903636',
+      nonce: '0x4b18e7fb2af63c074798ee788a8d660e36af282f67d0fbff548e9ecbb3554aac'
+    },
+    signature: '0x9d9c1c6219b310c098b95abbc2a945a7d1fab8940aeac3e83534a017651a9532278d62b3f56cf7ada4e74cdf6bb91b714868ad18f7d4abeee0900fc4ee986afd1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x833bda72f00134e2d476c54b13184706cb56a02e8542dc435e999f4b0db4a705',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x833bda72f00134e2d476c54b13184706cb56a02e8542dc435e999f4b0db4a705',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768902759',
+      validBefore: '1768903659',
+      nonce: '0xa302842435a5d8cdef5a73d7ba0aa4a0b69cd2e6aaeebba937faad25afb57ec4'
+    },
+    signature: '0x371f032978714ccf83c4d7c49190e5db7319d0fbb66f806f05c33c019ff80c7623e0fa2d1417b3f0d5ce9220c01a0153852cc81fc4515f8cb7bc7787c8afb0ac1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xb54a71ff9c3d4b7ee5fde77fe7f377e22571e0110ccbddd6c40cb0cc3ccc3f20',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xb54a71ff9c3d4b7ee5fde77fe7f377e22571e0110ccbddd6c40cb0cc3ccc3f20',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768902781',
+      validBefore: '1768903681',
+      nonce: '0x84d77a0d18953074eee84aec0410214c23e39f5a5215fc11c19de201ecaf843c'
+    },
+    signature: '0xe68ac439a5fe6ebea6c542a6fd363f52b4245155ce87d9cc5aa48ed14ffb57a32b7df7c20a224d6e3ee2061f5821aab8958c0eebc8ad05fe2f9f2742d3ef14471c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x57076aa5d32c0ec0724d3a35a80ed6979adaca2f33b6de6229f3df488c11ea06',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x57076aa5d32c0ec0724d3a35a80ed6979adaca2f33b6de6229f3df488c11ea06',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768902802',
+      validBefore: '1768903702',
+      nonce: '0x35179870329ccc6014e0a1a456cda1174013442d7dd83c07eb8ee74ee6a3564e'
+    },
+    signature: '0x007c01412b926fa387c853b21b9a93eb8d852a781b4dd438508f7c63c73892dc05b82647169afb14068d52ced14dd01abbc782de9ec285255f12bdab62abdb4c1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x1ae810a92208ad081fdc95d9878947f460ff83842fe6aa02f7d0c14423d0a037',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x1ae810a92208ad081fdc95d9878947f460ff83842fe6aa02f7d0c14423d0a037',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768902829',
+      validBefore: '1768903729',
+      nonce: '0x23a138b6af395defa9d8a2164087aff5d0a9b405d4ec048d08676a8a1ff54838'
+    },
+    signature: '0x8a53c010d472ee902657dbb0d1fa8566d6de43da8de1bc652ef56c46631c9fbe49610839bafe4b3695c6b7568b22d24ca7914984755c691f3d7797c068a22a381c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0x1a8a3bd2d2b2ee8a05120ba6d21337614f3e4d22f87f013a7cb750488ac148d4',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0x1a8a3bd2d2b2ee8a05120ba6d21337614f3e4d22f87f013a7cb750488ac148d4',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768903824',
+      validBefore: '1768904724',
+      nonce: '0xaff144e3382f8e5b64fb7e27eb4a3e6f3cc5491496db4de55b11e85de40eb465'
+    },
+    signature: '0x558092b2434723c8e829d647e7b75913eabfedbce2bfc81964a26012878c12c564b3c14cfd916df51f299551cb9ad8d720143872654ef6fb2f703da1ce0a8b6a1c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+✅ After settle: {
+  success: true,
+  transaction: '0xe64b9c59ccb3a8cccf034ae431de7ebfd8db336fecce414b29faa3b9ff350001',
+  network: 'eip155:84532'
+}
+🔍 Settle response: {
+  success: true,
+  transaction: '0xe64b9c59ccb3a8cccf034ae431de7ebfd8db336fecce414b29faa3b9ff350001',
+  network: 'eip155:84532',
+  payer: '0x7621106919A7485daF135C1EE0216AaFD1AD144D',
+  errorReason: undefined
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768914172',
+      validBefore: '1768915072',
+      nonce: '0x4f9eaf84877a8845675f8e381edcbfa426e922c5f5b7e2f8b02f4133954a96be'
+    },
+    signature: '0xf3d0a1262f6925d22441f5a3c4bea52c57b2eae4638196cb0d655ca1b261eedf12a30a8867675ad3c8a85417282d77e9ec743fc954f331ca0c342a414fd56fd61c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+Failed to settle transaction: ContractFunctionExecutionError: Execution reverted with reason: gas required exceeds allowance (7000).
+
+Request Arguments:
+  from:  0x7621106919A7485daF135C1EE0216AaFD1AD144D
+  to:    0x036CbD53842c5426634e7929541eC2318f3dCF7e
+  data:  0xe3ee160e000000000000000000000000eff051f71a5cfa1cb7c6072af3da8298647fac98000000000000000000000000111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000186a000000000000000000000000000000000000000000000000000000000696f7cfc00000000000000000000000000000000000000000000000000000000696f80804f9eaf84877a8845675f8e381edcbfa426e922c5f5b7e2f8b02f4133954a96be000000000000000000000000000000000000000000000000000000000000001cf3d0a1262f6925d22441f5a3c4bea52c57b2eae4638196cb0d655ca1b261eedf12a30a8867675ad3c8a85417282d77e9ec743fc954f331ca0c342a414fd56fd6
+ 
+Contract Call:
+  address:   0x036CbD53842c5426634e7929541eC2318f3dCF7e
+  function:  transferWithAuthorization(address from, address to, uint256 value, uint256 validAfter, uint256 validBefore, bytes32 nonce, uint8 v, bytes32 r, bytes32 s)
+  args:                               (0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98, 0x1111111111111111111111111111111111111111, 100000, 1768914172, 1768915072, 0x4f9eaf84877a8845675f8e381edcbfa426e922c5f5b7e2f8b02f4133954a96be, 28, 0xf3d0a1262f6925d22441f5a3c4bea52c57b2eae4638196cb0d655ca1b261eedf, 0x12a30a8867675ad3c8a85417282d77e9ec743fc954f331ca0c342a414fd56fd6)
+  sender:    0x7621106919A7485daF135C1EE0216AaFD1AD144D
+
+Docs: https://viem.sh/docs/contract/writeContract
+Details: gas required exceeds allowance (7000)
+Version: viem@2.44.1
+    at getContractError (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/utils/errors/getContractError.ts:81:10)
+    at AsyncFunction.internal (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/actions/wallet/writeContract.ts:242:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at ExactEvmScheme.settle (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/@x402/evm/src/exact/facilitator/scheme.ts:336:14)
+    at x402Facilitator.settle (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/@x402/core/src/facilitator/x402Facilitator.ts:443:28)
+    at <anonymous> (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/src/facilitator-implementation.ts:402:22) {
+  cause: TransactionExecutionError: Execution reverted with reason: gas required exceeds allowance (7000).
+  
+  Request Arguments:
+    from:  0x7621106919A7485daF135C1EE0216AaFD1AD144D
+    to:    0x036CbD53842c5426634e7929541eC2318f3dCF7e
+    data:  0xe3ee160e000000000000000000000000eff051f71a5cfa1cb7c6072af3da8298647fac98000000000000000000000000111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000186a000000000000000000000000000000000000000000000000000000000696f7cfc00000000000000000000000000000000000000000000000000000000696f80804f9eaf84877a8845675f8e381edcbfa426e922c5f5b7e2f8b02f4133954a96be000000000000000000000000000000000000000000000000000000000000001cf3d0a1262f6925d22441f5a3c4bea52c57b2eae4638196cb0d655ca1b261eedf12a30a8867675ad3c8a85417282d77e9ec743fc954f331ca0c342a414fd56fd6
+  
+  Details: gas required exceeds allowance (7000)
+  Version: viem@2.44.1
+      at getTransactionError (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/utils/errors/getTransactionError.ts:44:10)
+      at sendTransaction (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/actions/wallet/sendTransaction.ts:355:11)
+      ... 4 lines matching cause stack trace ...
+      at <anonymous> (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/src/facilitator-implementation.ts:402:22) {
+    cause: ExecutionRevertedError: Execution reverted with reason: gas required exceeds allowance (7000).
+    
+    Details: gas required exceeds allowance (7000)
+    Version: viem@2.44.1
+        at getNodeError (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/utils/errors/getNodeError.ts:82:12)
+        at <anonymous> (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/utils/errors/getTransactionError.ts:37:19)
+        at getTransactionError (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/utils/errors/getTransactionError.ts:43:5)
+        at sendTransaction (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/actions/wallet/sendTransaction.ts:355:11)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at AsyncFunction.internal (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/actions/wallet/writeContract.ts:231:14)
+        ... 2 lines matching cause stack trace ...
+        at <anonymous> (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/src/facilitator-implementation.ts:402:22) {
+      details: 'gas required exceeds allowance (7000)',
+      docsPath: undefined,
+      metaMessages: undefined,
+      shortMessage: 'Execution reverted with reason: gas required exceeds allowance (7000).',
+      version: '2.44.1',
+      [cause]: [EstimateGasExecutionError]
+    },
+    details: 'gas required exceeds allowance (7000)',
+    docsPath: undefined,
+    metaMessages: [
+      'Request Arguments:',
+      '  from:  0x7621106919A7485daF135C1EE0216AaFD1AD144D\n' +
+        '  to:    0x036CbD53842c5426634e7929541eC2318f3dCF7e\n' +
+        '  data:  0xe3ee160e000000000000000000000000eff051f71a5cfa1cb7c6072af3da8298647fac98000000000000000000000000111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000186a000000000000000000000000000000000000000000000000000000000696f7cfc00000000000000000000000000000000000000000000000000000000696f80804f9eaf84877a8845675f8e381edcbfa426e922c5f5b7e2f8b02f4133954a96be000000000000000000000000000000000000000000000000000000000000001cf3d0a1262f6925d22441f5a3c4bea52c57b2eae4638196cb0d655ca1b261eedf12a30a8867675ad3c8a85417282d77e9ec743fc954f331ca0c342a414fd56fd6'
+    ],
+    shortMessage: 'Execution reverted with reason: gas required exceeds allowance (7000).',
+    version: '2.44.1'
+  },
+  details: 'gas required exceeds allowance (7000)',
+  docsPath: '/docs/contract/writeContract',
+  metaMessages: [
+    'Request Arguments:',
+    '  from:  0x7621106919A7485daF135C1EE0216AaFD1AD144D\n' +
+      '  to:    0x036CbD53842c5426634e7929541eC2318f3dCF7e\n' +
+      '  data:  0xe3ee160e000000000000000000000000eff051f71a5cfa1cb7c6072af3da8298647fac98000000000000000000000000111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000186a000000000000000000000000000000000000000000000000000000000696f7cfc00000000000000000000000000000000000000000000000000000000696f80804f9eaf84877a8845675f8e381edcbfa426e922c5f5b7e2f8b02f4133954a96be000000000000000000000000000000000000000000000000000000000000001cf3d0a1262f6925d22441f5a3c4bea52c57b2eae4638196cb0d655ca1b261eedf12a30a8867675ad3c8a85417282d77e9ec743fc954f331ca0c342a414fd56fd6',
+    ' ',
+    'Contract Call:',
+    '  address:   0x036CbD53842c5426634e7929541eC2318f3dCF7e\n' +
+      '  function:  transferWithAuthorization(address from, address to, uint256 value, uint256 validAfter, uint256 validBefore, bytes32 nonce, uint8 v, bytes32 r, bytes32 s)\n' +
+      '  args:                               (0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98, 0x1111111111111111111111111111111111111111, 100000, 1768914172, 1768915072, 0x4f9eaf84877a8845675f8e381edcbfa426e922c5f5b7e2f8b02f4133954a96be, 28, 0xf3d0a1262f6925d22441f5a3c4bea52c57b2eae4638196cb0d655ca1b261eedf, 0x12a30a8867675ad3c8a85417282d77e9ec743fc954f331ca0c342a414fd56fd6)\n' +
+      '  sender:    0x7621106919A7485daF135C1EE0216AaFD1AD144D'
+  ],
+  shortMessage: 'Execution reverted with reason: gas required exceeds allowance (7000).',
+  version: '2.44.1',
+  abi: [
+    {
+      inputs: [Array],
+      name: 'transferWithAuthorization',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'transferWithAuthorization',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'balanceOf',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+      name: 'version',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    }
+  ],
+  args: [
+    '0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98',
+    '0x1111111111111111111111111111111111111111',
+    100000n,
+    1768914172n,
+    1768915072n,
+    '0x4f9eaf84877a8845675f8e381edcbfa426e922c5f5b7e2f8b02f4133954a96be',
+    28n,
+    '0xf3d0a1262f6925d22441f5a3c4bea52c57b2eae4638196cb0d655ca1b261eedf',
+    '0x12a30a8867675ad3c8a85417282d77e9ec743fc954f331ca0c342a414fd56fd6'
+  ],
+  contractAddress: '0x036CbD53842c5426634e7929541eC2318f3dCF7e',
+  formattedArgs: undefined,
+  functionName: 'transferWithAuthorization',
+  sender: '0x7621106919A7485daF135C1EE0216AaFD1AD144D'
+}
+✅ After settle: { success: false, transaction: '', network: 'eip155:84532' }
+🔍 Settle response: {
+  success: false,
+  transaction: '',
+  network: 'eip155:84532',
+  payer: '0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98',
+  errorReason: 'transaction_failed'
+}
+📥 POST /verify - Received verify request
+🔍 Before verify: {
+  scheme: 'exact',
+  network: 'eip155:84532',
+  payer: {
+    authorization: {
+      from: '0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98',
+      to: '0x1111111111111111111111111111111111111111',
+      value: '100000',
+      validAfter: '1768915509',
+      validBefore: '1768916409',
+      nonce: '0xb007ccf62b3e1b39f2acf11c937e5401e794da63bb1d7d1a0ce6c63b1ef9771d'
+    },
+    signature: '0xa16257ad8831f123a20be0a917bd55186cbaeea8cbf9c333ed93bebda3b8b3ca11ab90d882eef3cfd5ef6e39a334a10e9f91168ad10b02f4079a4295920a1bc61c'
+  }
+}
+✅ After verify: { isValid: true, payer: '0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98' }
+📥 POST /settle - Received settle request
+💰 Before settle: { scheme: 'exact', network: 'eip155:84532', amount: '100000' }
+Failed to settle transaction: ContractFunctionExecutionError: Execution reverted with reason: gas required exceeds allowance (7000).
+
+Request Arguments:
+  from:  0x7621106919A7485daF135C1EE0216AaFD1AD144D
+  to:    0x036CbD53842c5426634e7929541eC2318f3dCF7e
+  data:  0xe3ee160e000000000000000000000000eff051f71a5cfa1cb7c6072af3da8298647fac98000000000000000000000000111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000186a000000000000000000000000000000000000000000000000000000000696f823500000000000000000000000000000000000000000000000000000000696f85b9b007ccf62b3e1b39f2acf11c937e5401e794da63bb1d7d1a0ce6c63b1ef9771d000000000000000000000000000000000000000000000000000000000000001ca16257ad8831f123a20be0a917bd55186cbaeea8cbf9c333ed93bebda3b8b3ca11ab90d882eef3cfd5ef6e39a334a10e9f91168ad10b02f4079a4295920a1bc6
+ 
+Contract Call:
+  address:   0x036CbD53842c5426634e7929541eC2318f3dCF7e
+  function:  transferWithAuthorization(address from, address to, uint256 value, uint256 validAfter, uint256 validBefore, bytes32 nonce, uint8 v, bytes32 r, bytes32 s)
+  args:                               (0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98, 0x1111111111111111111111111111111111111111, 100000, 1768915509, 1768916409, 0xb007ccf62b3e1b39f2acf11c937e5401e794da63bb1d7d1a0ce6c63b1ef9771d, 28, 0xa16257ad8831f123a20be0a917bd55186cbaeea8cbf9c333ed93bebda3b8b3ca, 0x11ab90d882eef3cfd5ef6e39a334a10e9f91168ad10b02f4079a4295920a1bc6)
+  sender:    0x7621106919A7485daF135C1EE0216AaFD1AD144D
+
+Docs: https://viem.sh/docs/contract/writeContract
+Details: gas required exceeds allowance (7000)
+Version: viem@2.44.1
+    at getContractError (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/utils/errors/getContractError.ts:81:10)
+    at AsyncFunction.internal (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/actions/wallet/writeContract.ts:242:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at ExactEvmScheme.settle (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/@x402/evm/src/exact/facilitator/scheme.ts:336:14)
+    at x402Facilitator.settle (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/@x402/core/src/facilitator/x402Facilitator.ts:443:28)
+    at <anonymous> (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/src/facilitator-implementation.ts:402:22) {
+  cause: TransactionExecutionError: Execution reverted with reason: gas required exceeds allowance (7000).
+  
+  Request Arguments:
+    from:  0x7621106919A7485daF135C1EE0216AaFD1AD144D
+    to:    0x036CbD53842c5426634e7929541eC2318f3dCF7e
+    data:  0xe3ee160e000000000000000000000000eff051f71a5cfa1cb7c6072af3da8298647fac98000000000000000000000000111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000186a000000000000000000000000000000000000000000000000000000000696f823500000000000000000000000000000000000000000000000000000000696f85b9b007ccf62b3e1b39f2acf11c937e5401e794da63bb1d7d1a0ce6c63b1ef9771d000000000000000000000000000000000000000000000000000000000000001ca16257ad8831f123a20be0a917bd55186cbaeea8cbf9c333ed93bebda3b8b3ca11ab90d882eef3cfd5ef6e39a334a10e9f91168ad10b02f4079a4295920a1bc6
+  
+  Details: gas required exceeds allowance (7000)
+  Version: viem@2.44.1
+      at getTransactionError (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/utils/errors/getTransactionError.ts:44:10)
+      at sendTransaction (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/actions/wallet/sendTransaction.ts:355:11)
+      ... 4 lines matching cause stack trace ...
+      at <anonymous> (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/src/facilitator-implementation.ts:402:22) {
+    cause: ExecutionRevertedError: Execution reverted with reason: gas required exceeds allowance (7000).
+    
+    Details: gas required exceeds allowance (7000)
+    Version: viem@2.44.1
+        at getNodeError (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/utils/errors/getNodeError.ts:82:12)
+        at <anonymous> (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/utils/errors/getTransactionError.ts:37:19)
+        at getTransactionError (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/utils/errors/getTransactionError.ts:43:5)
+        at sendTransaction (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/actions/wallet/sendTransaction.ts:355:11)
+        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        at AsyncFunction.internal (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/actions/wallet/writeContract.ts:231:14)
+        ... 2 lines matching cause stack trace ...
+        at <anonymous> (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/src/facilitator-implementation.ts:402:22) {
+      details: 'gas required exceeds allowance (7000)',
+      docsPath: undefined,
+      metaMessages: undefined,
+      shortMessage: 'Execution reverted with reason: gas required exceeds allowance (7000).',
+      version: '2.44.1',
+      [cause]: [EstimateGasExecutionError]
+    },
+    details: 'gas required exceeds allowance (7000)',
+    docsPath: undefined,
+    metaMessages: [
+      'Request Arguments:',
+      '  from:  0x7621106919A7485daF135C1EE0216AaFD1AD144D\n' +
+        '  to:    0x036CbD53842c5426634e7929541eC2318f3dCF7e\n' +
+        '  data:  0xe3ee160e000000000000000000000000eff051f71a5cfa1cb7c6072af3da8298647fac98000000000000000000000000111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000186a000000000000000000000000000000000000000000000000000000000696f823500000000000000000000000000000000000000000000000000000000696f85b9b007ccf62b3e1b39f2acf11c937e5401e794da63bb1d7d1a0ce6c63b1ef9771d000000000000000000000000000000000000000000000000000000000000001ca16257ad8831f123a20be0a917bd55186cbaeea8cbf9c333ed93bebda3b8b3ca11ab90d882eef3cfd5ef6e39a334a10e9f91168ad10b02f4079a4295920a1bc6'
+    ],
+    shortMessage: 'Execution reverted with reason: gas required exceeds allowance (7000).',
+    version: '2.44.1'
+  },
+  details: 'gas required exceeds allowance (7000)',
+  docsPath: '/docs/contract/writeContract',
+  metaMessages: [
+    'Request Arguments:',
+    '  from:  0x7621106919A7485daF135C1EE0216AaFD1AD144D\n' +
+      '  to:    0x036CbD53842c5426634e7929541eC2318f3dCF7e\n' +
+      '  data:  0xe3ee160e000000000000000000000000eff051f71a5cfa1cb7c6072af3da8298647fac98000000000000000000000000111111111111111111111111111111111111111100000000000000000000000000000000000000000000000000000000000186a000000000000000000000000000000000000000000000000000000000696f823500000000000000000000000000000000000000000000000000000000696f85b9b007ccf62b3e1b39f2acf11c937e5401e794da63bb1d7d1a0ce6c63b1ef9771d000000000000000000000000000000000000000000000000000000000000001ca16257ad8831f123a20be0a917bd55186cbaeea8cbf9c333ed93bebda3b8b3ca11ab90d882eef3cfd5ef6e39a334a10e9f91168ad10b02f4079a4295920a1bc6',
+    ' ',
+    'Contract Call:',
+    '  address:   0x036CbD53842c5426634e7929541eC2318f3dCF7e\n' +
+      '  function:  transferWithAuthorization(address from, address to, uint256 value, uint256 validAfter, uint256 validBefore, bytes32 nonce, uint8 v, bytes32 r, bytes32 s)\n' +
+      '  args:                               (0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98, 0x1111111111111111111111111111111111111111, 100000, 1768915509, 1768916409, 0xb007ccf62b3e1b39f2acf11c937e5401e794da63bb1d7d1a0ce6c63b1ef9771d, 28, 0xa16257ad8831f123a20be0a917bd55186cbaeea8cbf9c333ed93bebda3b8b3ca, 0x11ab90d882eef3cfd5ef6e39a334a10e9f91168ad10b02f4079a4295920a1bc6)\n' +
+      '  sender:    0x7621106919A7485daF135C1EE0216AaFD1AD144D'
+  ],
+  shortMessage: 'Execution reverted with reason: gas required exceeds allowance (7000).',
+  version: '2.44.1',
+  abi: [
+    {
+      inputs: [Array],
+      name: 'transferWithAuthorization',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'transferWithAuthorization',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'balanceOf',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+      name: 'version',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    }
+  ],
+  args: [
+    '0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98',
+    '0x1111111111111111111111111111111111111111',
+    100000n,
+    1768915509n,
+    1768916409n,
+    '0xb007ccf62b3e1b39f2acf11c937e5401e794da63bb1d7d1a0ce6c63b1ef9771d',
+    28n,
+    '0xa16257ad8831f123a20be0a917bd55186cbaeea8cbf9c333ed93bebda3b8b3ca',
+    '0x11ab90d882eef3cfd5ef6e39a334a10e9f91168ad10b02f4079a4295920a1bc6'
+  ],
+  contractAddress: '0x036CbD53842c5426634e7929541eC2318f3dCF7e',
+  formattedArgs: undefined,
+  functionName: 'transferWithAuthorization',
+  sender: '0x7621106919A7485daF135C1EE0216AaFD1AD144D'
+}
+✅ After settle: { success: false, transaction: '', network: 'eip155:84532' }
+🔍 Settle response: {
+  success: false,
+  transaction: '',
+  network: 'eip155:84532',
+  payer: '0xEFf051f71A5cFA1CB7c6072AF3da8298647FAC98',
+  errorReason: 'transaction_failed'
+}
+8:38:07 PM [tsx] change in ./src/facilitator-implementation.ts Restarting...
+c/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/@noble/curves/src/abstract/weierstrass.ts:394
+      throw new Error(
+            ^
+
+
+Error: invalid private key, expected hex or 32 bytes, got string
+    at normPrivateKeyToScalar (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/@noble/curves/src/abstract/weierstrass.ts:394:13)
+    at Function.fromPrivateKey (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/@noble/curves/src/abstract/weierstrass.ts:515:34)
+    at Object.getPublicKey (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/@noble/curves/src/abstract/weierstrass.ts:1075:18)
+    at privateKeyToAccount (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/viem/accounts/privateKeyToAccount.ts:48:37)
+    at <anonymous> (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/src/facilitator-implementation.ts:66:20)
+    at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:336:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:106:12)
+
+Node.js v18.19.0

@@ -1,0 +1,31 @@
+
+> railbridge-facilitator@1.0.0 test:merchant-same-chain
+> tsx src/merchant-server-same-chain.ts
+
+node:events:495
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::4021
+    at __node_internal_captureLargerStackTrace (node:internal/errors:496:5)
+    at __node_internal_uvExceptionWithHostPort (node:internal/errors:593:12)
+    at Server.setupListenHandle [as _listen2] (node:net:1817:16)
+    at listenInCluster (node:net:1865:12)
+    at Server.listen (node:net:1953:7)
+    at Function.listen (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/node_modules/express/lib/application.js:635:24)
+    at <anonymous> (/Users/michalwanto/Documents/Michal_wanto/Work/Synergy_test/Transactional_agent/railbridge_external/facilitator/src/merchant-server-same-chain.ts:273:5)
+    at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:336:24)
+    at async loadESM (node:internal/process/esm_loader:34:7)
+    at async handleMainPromise (node:internal/modules/run_main:106:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1844:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 4021
+}
+
+Node.js v18.19.0

@@ -1,0 +1,67 @@
+
+> railbridge-facilitator@1.0.0 test:merchant-same-chain
+> tsx src/merchant-server-same-chain.ts
+
+🛒 Merchant server (same-chain only) listening at http://localhost:4021
+Using facilitator at: http://localhost:4022
+Merchant address: 0x1111111111111111111111111111111111111111
+[2026-01-20T07:38:35.804Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T07:38:35.804Z] GET /api/premium - 402 (5ms)
+[2026-01-20T07:38:35.838Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+DEBUG: Response Headers: [Object: null prototype] { 'x-powered-by': 'Express' }
+DEBUG: res.locals: {}
+DEBUG: Req Keys: [
+  '_readableState',   '_events',
+  '_eventsCount',     '_maxListeners',
+  'socket',           'httpVersionMajor',
+  'httpVersionMinor', 'httpVersion',
+  'complete',         'rawHeaders',
+  'rawTrailers',      'joinDuplicateHeaders',
+  'aborted',          'upgrade',
+  'url',              'method',
+  'statusCode',       'statusMessage',
+  'client',           '_consuming',
+  '_dumped',          'next',
+  'baseUrl',          'originalUrl',
+  '_parsedUrl',       'params',
+  'query',            'res',
+  'body',             'route'
+]
+DEBUG: Req Payment Info: undefined
+[2026-01-20T07:38:35.838Z] GET /api/premium - 200 (9012ms)
+[2026-01-20T07:40:23.526Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T07:40:23.526Z] GET /api/premium - 402 (0ms)
+[2026-01-20T07:40:23.554Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+DEBUG: Response Headers: [Object: null prototype] { 'x-powered-by': 'Express' }
+DEBUG: res.locals: {}
+DEBUG: Req Keys: [
+  '_readableState',   '_events',
+  '_eventsCount',     '_maxListeners',
+  'socket',           'httpVersionMajor',
+  'httpVersionMinor', 'httpVersion',
+  'complete',         'rawHeaders',
+  'rawTrailers',      'joinDuplicateHeaders',
+  'aborted',          'upgrade',
+  'url',              'method',
+  'statusCode',       'statusMessage',
+  'client',           '_consuming',
+  '_dumped',          'next',
+  'baseUrl',          'originalUrl',
+  '_parsedUrl',       'params',
+  'query',            'res',
+  'body',             'route'
+]
+DEBUG: Req Payment Info: undefined
+[2026-01-20T07:40:23.554Z] GET /api/premium - 200 (4894ms)

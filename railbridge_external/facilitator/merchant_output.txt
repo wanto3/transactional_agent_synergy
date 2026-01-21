@@ -1,0 +1,19 @@
+
+> railbridge-facilitator@1.0.0 test:merchant-same-chain
+> tsx src/merchant-server-same-chain.ts
+
+🛒 Merchant server (same-chain only) listening at http://localhost:4021
+Using facilitator at: http://localhost:4022
+Merchant address: 0x1111111111111111111111111111111111111111
+[2026-01-20T07:25:44.639Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T07:25:44.639Z] GET /api/premium - 402 (5ms)
+[2026-01-20T07:25:44.671Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+DEBUG: Response Headers: [Object: null prototype] { 'x-powered-by': 'Express' }
+DEBUG: Req Payment Info: undefined
+[2026-01-20T07:25:44.671Z] GET /api/premium - 200 (6076ms)

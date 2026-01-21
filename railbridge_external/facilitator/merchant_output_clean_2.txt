@@ -1,0 +1,517 @@
+
+> railbridge-facilitator@1.0.0 test:merchant-same-chain
+> tsx src/merchant-server-same-chain.ts
+
+🛒 Merchant server (same-chain only) listening at http://localhost:4021
+Using facilitator at: http://localhost:4022
+Merchant address: 0x1111111111111111111111111111111111111111
+[2026-01-20T08:19:22.532Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:19:22.532Z] GET /api/premium - 402 (5ms)
+[2026-01-20T08:19:22.566Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:19:22.566Z] GET /api/premium - 200 (5316ms)
+[2026-01-20T08:23:02.380Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:23:02.380Z] GET /api/premium - 402 (6ms)
+[2026-01-20T08:23:02.416Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:23:02.416Z] GET /api/premium - 200 (5733ms)
+[2026-01-20T08:23:30.853Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:23:30.853Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:23:30.866Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:23:30.866Z] GET /api/premium - 200 (5080ms)
+[2026-01-20T08:23:57.298Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:23:57.298Z] GET /api/premium - 402 (0ms)
+[2026-01-20T08:23:57.307Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:23:57.307Z] GET /api/premium - 200 (5288ms)
+[2026-01-20T08:24:33.039Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:24:33.039Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:24:33.051Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:24:33.051Z] GET /api/premium - 200 (5445ms)
+[2026-01-20T08:24:51.455Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:24:51.455Z] GET /api/premium - 402 (2ms)
+[2026-01-20T08:24:51.464Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:24:51.464Z] GET /api/premium - 200 (5013ms)
+[2026-01-20T08:25:09.549Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:25:09.549Z] GET /api/premium - 402 (2ms)
+[2026-01-20T08:25:09.565Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:25:09.565Z] GET /api/premium - 200 (5463ms)
+[2026-01-20T08:25:36.550Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:25:36.550Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:25:36.556Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:25:36.556Z] GET /api/premium - 200 (8150ms)
+[2026-01-20T08:26:02.405Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:26:02.405Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:26:02.415Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:26:02.415Z] GET /api/premium - 200 (5296ms)
+[2026-01-20T08:26:25.586Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:26:25.586Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:26:25.592Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:26:25.592Z] GET /api/premium - 200 (6069ms)
+[2026-01-20T08:27:12.122Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:27:12.122Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:27:12.147Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:27:12.147Z] GET /api/premium - 200 (5448ms)
+[2026-01-20T08:27:29.400Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:27:29.400Z] GET /api/premium - 402 (0ms)
+[2026-01-20T08:27:29.417Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:27:29.417Z] GET /api/premium - 200 (6498ms)
+[2026-01-20T08:30:26.531Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:30:26.531Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:30:26.556Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:30:26.556Z] GET /api/premium - 200 (4967ms)
+[2026-01-20T08:30:50.522Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:30:50.522Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:30:50.544Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:30:50.544Z] GET /api/premium - 200 (7529ms)
+[2026-01-20T08:31:24.167Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:31:24.167Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:31:24.190Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:31:24.190Z] GET /api/premium - 200 (5619ms)
+[2026-01-20T08:39:47.163Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:39:47.163Z] GET /api/premium - 402 (8ms)
+[2026-01-20T08:39:47.199Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:39:47.199Z] GET /api/premium - 200 (5384ms)
+[2026-01-20T08:42:12.780Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:42:12.780Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:42:12.798Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:42:12.798Z] GET /api/premium - 200 (8595ms)
+[2026-01-20T08:44:53.397Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:44:53.397Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:44:53.426Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:44:53.426Z] GET /api/premium - 200 (7950ms)
+[2026-01-20T08:45:33.592Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:45:33.592Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:45:33.608Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:45:33.608Z] GET /api/premium - 200 (5212ms)
+[2026-01-20T08:46:15.282Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:46:15.282Z] GET /api/premium - 402 (2ms)
+[2026-01-20T08:46:15.306Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:46:15.306Z] GET /api/premium - 200 (5857ms)
+[2026-01-20T08:46:54.643Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:46:54.643Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:46:54.655Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:46:54.655Z] GET /api/premium - 200 (5594ms)
+[2026-01-20T08:47:34.393Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:47:34.393Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:47:34.417Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:47:34.417Z] GET /api/premium - 200 (5000ms)
+[2026-01-20T08:48:38.091Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:48:38.091Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:48:38.114Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T08:48:38.114Z] GET /api/premium - 200 (6664ms)
+[2026-01-20T09:12:32.459Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:12:32.459Z] GET /api/premium - 402 (9ms)
+[2026-01-20T09:12:32.493Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:12:32.493Z] GET /api/premium - 200 (4998ms)
+[2026-01-20T09:13:44.779Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:13:44.779Z] GET /api/premium - 402 (2ms)
+[2026-01-20T09:13:44.803Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:13:44.803Z] GET /api/premium - 200 (5754ms)
+[2026-01-20T09:14:51.705Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:14:51.705Z] GET /api/premium - 402 (1ms)
+[2026-01-20T09:14:51.728Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:14:51.728Z] GET /api/premium - 200 (5376ms)
+[2026-01-20T09:15:48.474Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:15:48.474Z] GET /api/premium - 402 (0ms)
+[2026-01-20T09:15:48.498Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:15:48.498Z] GET /api/premium - 200 (5040ms)
+[2026-01-20T09:16:48.772Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:16:48.772Z] GET /api/premium - 402 (2ms)
+[2026-01-20T09:16:48.795Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:16:48.795Z] GET /api/premium - 200 (5817ms)
+[2026-01-20T09:20:52.191Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:20:52.191Z] GET /api/premium - 402 (8ms)
+[2026-01-20T09:20:52.218Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:20:52.218Z] GET /api/premium - 200 (6244ms)
+[2026-01-20T09:23:53.566Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:23:53.566Z] GET /api/premium - 402 (1ms)
+[2026-01-20T09:23:53.599Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:23:53.599Z] GET /api/premium - 200 (4970ms)
+[2026-01-20T09:27:55.559Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:27:55.559Z] GET /api/premium - 402 (1ms)
+[2026-01-20T09:27:55.580Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:27:55.580Z] GET /api/premium - 200 (6568ms)
+[2026-01-20T09:32:12.747Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:32:12.747Z] GET /api/premium - 402 (1ms)
+[2026-01-20T09:32:12.769Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:32:12.769Z] GET /api/premium - 200 (6031ms)
+[2026-01-20T09:33:55.885Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:33:55.885Z] GET /api/premium - 402 (1ms)
+[2026-01-20T09:33:55.907Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:33:55.907Z] GET /api/premium - 200 (5222ms)
+[2026-01-20T09:37:34.338Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:37:34.338Z] GET /api/premium - 402 (2ms)
+[2026-01-20T09:37:34.362Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:37:34.362Z] GET /api/premium - 200 (5144ms)
+[2026-01-20T09:39:51.512Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:39:51.512Z] GET /api/premium - 402 (2ms)
+[2026-01-20T09:39:51.549Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:39:51.549Z] GET /api/premium - 200 (11158ms)
+[2026-01-20T09:46:50.404Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:46:50.404Z] GET /api/premium - 402 (7ms)
+[2026-01-20T09:46:50.431Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:46:50.431Z] GET /api/premium - 200 (5178ms)
+[2026-01-20T09:47:29.983Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:47:29.983Z] GET /api/premium - 402 (1ms)
+[2026-01-20T09:47:30.002Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:47:30.002Z] GET /api/premium - 200 (5934ms)
+[2026-01-20T09:48:11.070Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:48:11.070Z] GET /api/premium - 402 (0ms)
+[2026-01-20T09:48:11.090Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:48:11.090Z] GET /api/premium - 200 (5138ms)
+[2026-01-20T09:48:32.082Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T09:48:32.082Z] GET /api/premium - 402 (0ms)
+[2026-01-20T09:48:32.099Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T09:48:32.099Z] GET /api/premium - 200 (6841ms)
+[2026-01-20T10:00:54.238Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T10:00:54.238Z] GET /api/premium - 402 (1ms)
+[2026-01-20T10:00:54.259Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T10:00:54.259Z] GET /api/premium - 200 (7140ms)
+[2026-01-20T10:02:16.358Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T10:02:16.358Z] GET /api/premium - 402 (1ms)
+[2026-01-20T10:02:16.380Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T10:02:16.380Z] GET /api/premium - 200 (6977ms)
+[2026-01-20T10:02:39.928Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T10:02:39.928Z] GET /api/premium - 402 (1ms)
+[2026-01-20T10:02:39.941Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T10:02:39.941Z] GET /api/premium - 200 (5745ms)
+[2026-01-20T10:03:01.097Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T10:03:01.097Z] GET /api/premium - 402 (1ms)
+[2026-01-20T10:03:01.104Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T10:03:01.104Z] GET /api/premium - 200 (5014ms)
+[2026-01-20T10:03:22.712Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T10:03:22.712Z] GET /api/premium - 402 (0ms)
+[2026-01-20T10:03:22.720Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T10:03:22.720Z] GET /api/premium - 200 (5073ms)
+[2026-01-20T10:03:49.225Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T10:03:49.225Z] GET /api/premium - 402 (0ms)
+[2026-01-20T10:03:49.245Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T10:03:49.245Z] GET /api/premium - 200 (5169ms)
+[2026-01-20T10:20:24.173Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T10:20:24.173Z] GET /api/premium - 402 (0ms)
+[2026-01-20T10:20:24.201Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T10:20:24.201Z] GET /api/premium - 200 (6069ms)
+[2026-01-20T13:12:52.517Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T13:12:52.517Z] GET /api/premium - 402 (7ms)
+[2026-01-20T13:12:52.552Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T13:12:52.552Z] GET /api/premium - 402 (12766ms)
+[2026-01-20T13:35:09.902Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T13:35:09.902Z] GET /api/premium - 402 (4ms)
+[2026-01-20T13:35:09.929Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T13:35:09.929Z] GET /api/premium - 402 (9039ms)
+[2026-01-20T13:44:10.447Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T13:44:10.447Z] GET /api/premium - 402 (1ms)
+[2026-01-20T13:44:10.469Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T13:44:10.469Z] GET /api/premium - 200 (11691ms)
+[2026-01-20T13:45:35.192Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T13:45:35.192Z] GET /api/premium - 402 (1ms)
+[2026-01-20T13:45:35.221Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T13:45:35.221Z] GET /api/premium - 200 (7185ms)
+[2026-01-20T14:01:44.138Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T14:01:44.138Z] GET /api/premium - 402 (6ms)
+[2026-01-20T14:01:44.187Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+[2026-01-20T14:01:44.187Z] GET /api/premium - 200 (6311ms)

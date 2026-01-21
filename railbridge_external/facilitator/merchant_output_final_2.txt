@@ -1,0 +1,73 @@
+
+> railbridge-facilitator@1.0.0 test:merchant-same-chain
+> tsx src/merchant-server-same-chain.ts
+
+🛒 Merchant server (same-chain only) listening at http://localhost:4021
+Using facilitator at: http://localhost:4022
+Merchant address: 0x1111111111111111111111111111111111111111
+[2026-01-20T08:06:58.613Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:06:58.613Z] GET /api/premium - 402 (6ms)
+[2026-01-20T08:06:58.648Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+DEBUG: Response Headers: [Object: null prototype] { 'x-powered-by': 'Express' }
+DEBUG: Request Headers: {"host":"localhost:4021","connection":"keep-alive","content-type":"application/json","payment-signature":"eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3JpemF0aW9uIjp7ImZyb20iOiIweDc2MjExMDY5MTlBNzQ4NWRhRjEzNUMxRUUwMjE2QWFGRDFBRDE0NEQiLCJ0byI6IjB4MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSIsInZhbHVlIjoiMTAwMDAwIiwidmFsaWRBZnRlciI6IjE3Njg4OTU4MTgiLCJ2YWxpZEJlZm9yZSI6IjE3Njg4OTY3MTgiLCJub25jZSI6IjB4NGY3MDI2ZjZmYzExMjUzMDY4ZWQzNTRhOWU4ZGM5ZTY1MDhiOGM3OTM1OWIxOTc2N2FlNjI0MDQ0Y2YwZmM4MyJ9LCJzaWduYXR1cmUiOiIweDc4Mjc0NDcwMGRkOWE2YWE4MzM3MGFiZTliOWIwM2NlOGU1OTE3NzYyMGZjMzRmNDA4OTcxYzQ3OGRhMzUxZTcwYjVhZDVlZDQwZTViMGJkMTE1ZWNjNjE1OTNlNDQzOTEwOTc0NzRmMzBlNWQ0MzRiZDIyNGQzY2I4OWMxMTRiMWIifSwicmVzb3VyY2UiOnsidXJsIjoiaHR0cDovL2xvY2FsaG9zdDo0MDIxL2FwaS9wcmVtaXVtIiwiZGVzY3JpcHRpb24iOiJQcmVtaXVtIEFQSSBlbmRwb2ludCIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MzIiLCJhbW91bnQiOiIxMDAwMDAiLCJhc3NldCI6IjB4MDM2Q2JENTM4NDJjNTQyNjYzNGU3OTI5NTQxZUMyMzE4ZjNkQ0Y3ZSIsInBheVRvIjoiMHgxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTREMiLCJ2ZXJzaW9uIjoiMiJ9fX0=","access-control-expose-headers":"PAYMENT-RESPONSE,X-PAYMENT-RESPONSE","accept":"*/*","accept-language":"*","sec-fetch-mode":"cors","user-agent":"node","accept-encoding":"gzip, deflate"}
+DEBUG: Req Payment: undefined
+DEBUG: Intercepted settlePayment call
+DEBUG: Args: [
+  {
+    "x402Version": 2,
+    "payload": {
+      "authorization": {
+        "from": "0x7621106919A7485daF135C1EE0216AaFD1AD144D",
+        "to": "0x1111111111111111111111111111111111111111",
+        "value": "100000",
+        "validAfter": "1768895818",
+        "validBefore": "1768896718",
+        "nonce": "0x4f7026f6fc11253068ed354a9e8dc9e6508b8c79359b19767ae624044cf0fc83"
+      },
+      "signature": "0x782744700dd9a6aa83370abe9b9b03ce8e59177620fc34f408971c478da351e70b5ad5ed40e5b0bd115ecc61593e44391097474f30e5d434bd224d3cb89c114b1b"
+    },
+    "resource": {
+      "url": "http://localhost:4021/api/premium",
+      "description": "Premium API endpoint",
+      "mimeType": "application/json"
+    },
+    "accepted": {
+      "scheme": "exact",
+      "network": "eip155:84532",
+      "amount": "100000",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "payTo": "0x1111111111111111111111111111111111111111",
+      "maxTimeoutSeconds": 300,
+      "extra": {
+        "name": "USDC",
+        "version": "2"
+      }
+    }
+  },
+  {
+    "scheme": "exact",
+    "network": "eip155:84532",
+    "amount": "100000",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "payTo": "0x1111111111111111111111111111111111111111",
+    "maxTimeoutSeconds": 300,
+    "extra": {
+      "name": "USDC",
+      "version": "2"
+    }
+  }
+]
+DEBUG: Settle Result: {
+  "success": true,
+  "transaction": "0x91f9e79525916e97effadf8d729666e0ce83167411aa3913dfd090003f70a73d",
+  "network": "eip155:84532",
+  "payer": "0x7621106919A7485daF135C1EE0216AaFD1AD144D"
+}
+DEBUG: Cached result for nonce 0x4f7026f6fc11253068ed354a9e8dc9e6508b8c79359b19767ae624044cf0fc83
+[2026-01-20T08:06:58.648Z] GET /api/premium - 200 (5034ms)

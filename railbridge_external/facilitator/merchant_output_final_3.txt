@@ -1,0 +1,217 @@
+
+> railbridge-facilitator@1.0.0 test:merchant-same-chain
+> tsx src/merchant-server-same-chain.ts
+
+🛒 Merchant server (same-chain only) listening at http://localhost:4021
+Using facilitator at: http://localhost:4022
+Merchant address: 0x1111111111111111111111111111111111111111
+[2026-01-20T08:09:10.898Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:09:10.898Z] GET /api/premium - 402 (5ms)
+[2026-01-20T08:09:10.929Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+DEBUG: Response Headers: [Object: null prototype] { 'x-powered-by': 'Express' }
+DEBUG: Request Headers: {"host":"localhost:4021","connection":"keep-alive","content-type":"application/json","payment-signature":"eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3JpemF0aW9uIjp7ImZyb20iOiIweDc2MjExMDY5MTlBNzQ4NWRhRjEzNUMxRUUwMjE2QWFGRDFBRDE0NEQiLCJ0byI6IjB4MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSIsInZhbHVlIjoiMTAwMDAwIiwidmFsaWRBZnRlciI6IjE3Njg4OTU5NTAiLCJ2YWxpZEJlZm9yZSI6IjE3Njg4OTY4NTAiLCJub25jZSI6IjB4YTYwOGYxZTYwMjkzNDZmYzEyOWVlZTRjNjI2ZGUxNzZlNTk0NjEwODQzMjJlMWQ0YWQ2MWFjMjU0OTAwMDAzNCJ9LCJzaWduYXR1cmUiOiIweDk0YzU2MzY5NTVlZDBjNzhiYzFmMmZhMDAwOWRhMGEzMmMxNjZiODliNmZjYWY1ODRmYzIyMmI5MzZjY2VhMmI3N2M3NWYwZDQ3MGUzMmIzNTYzMTZjZDZlYWE0MTdhMTJlNzI0YTc1ZjAzOTc5MzI0ZjIzODIwM2E1NTY4ZGY1MWIifSwicmVzb3VyY2UiOnsidXJsIjoiaHR0cDovL2xvY2FsaG9zdDo0MDIxL2FwaS9wcmVtaXVtIiwiZGVzY3JpcHRpb24iOiJQcmVtaXVtIEFQSSBlbmRwb2ludCIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MzIiLCJhbW91bnQiOiIxMDAwMDAiLCJhc3NldCI6IjB4MDM2Q2JENTM4NDJjNTQyNjYzNGU3OTI5NTQxZUMyMzE4ZjNkQ0Y3ZSIsInBheVRvIjoiMHgxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTREMiLCJ2ZXJzaW9uIjoiMiJ9fX0=","access-control-expose-headers":"PAYMENT-RESPONSE,X-PAYMENT-RESPONSE","accept":"*/*","accept-language":"*","sec-fetch-mode":"cors","user-agent":"node","accept-encoding":"gzip, deflate"}
+DEBUG: Req Payment: undefined
+DEBUG: Payment Sig found: eyJ4NDAyVmVyc2lvbiI6...
+DEBUG: Parsed Base64 payload
+DEBUG: Route looking up nonce 0xa608f1e6029346fc129eee4c626de176e59461084322e1d4ad61ac2549000034
+DEBUG: No cached result found for nonce (timed out)
+DEBUG: Intercepted settlePayment call
+DEBUG: Args: [
+  {
+    "x402Version": 2,
+    "payload": {
+      "authorization": {
+        "from": "0x7621106919A7485daF135C1EE0216AaFD1AD144D",
+        "to": "0x1111111111111111111111111111111111111111",
+        "value": "100000",
+        "validAfter": "1768895950",
+        "validBefore": "1768896850",
+        "nonce": "0xa608f1e6029346fc129eee4c626de176e59461084322e1d4ad61ac2549000034"
+      },
+      "signature": "0x94c5636955ed0c78bc1f2fa0009da0a32c166b89b6fcaf584fc222b936ccea2b77c75f0d470e32b356316cd6eaa417a12e724a75f03979324f238203a5568df51b"
+    },
+    "resource": {
+      "url": "http://localhost:4021/api/premium",
+      "description": "Premium API endpoint",
+      "mimeType": "application/json"
+    },
+    "accepted": {
+      "scheme": "exact",
+      "network": "eip155:84532",
+      "amount": "100000",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "payTo": "0x1111111111111111111111111111111111111111",
+      "maxTimeoutSeconds": 300,
+      "extra": {
+        "name": "USDC",
+        "version": "2"
+      }
+    }
+  },
+  {
+    "scheme": "exact",
+    "network": "eip155:84532",
+    "amount": "100000",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "payTo": "0x1111111111111111111111111111111111111111",
+    "maxTimeoutSeconds": 300,
+    "extra": {
+      "name": "USDC",
+      "version": "2"
+    }
+  }
+]
+DEBUG: Settle Result: {
+  "success": true,
+  "transaction": "0x1f728bade4599221321aabd697c37d6bb7596a5fefd914b8d7afa38d3b728a59",
+  "network": "eip155:84532",
+  "payer": "0x7621106919A7485daF135C1EE0216AaFD1AD144D"
+}
+DEBUG: Cached result for nonce 0xa608f1e6029346fc129eee4c626de176e59461084322e1d4ad61ac2549000034
+[2026-01-20T08:09:10.929Z] GET /api/premium - 200 (13880ms)
+[2026-01-20T08:11:14.827Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:11:14.827Z] GET /api/premium - 402 (1ms)
+[2026-01-20T08:11:14.861Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+DEBUG: Response Headers: [Object: null prototype] { 'x-powered-by': 'Express' }
+DEBUG: Request Headers: {"host":"localhost:4021","connection":"keep-alive","content-type":"application/json","payment-signature":"eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3JpemF0aW9uIjp7ImZyb20iOiIweDc2MjExMDY5MTlBNzQ4NWRhRjEzNUMxRUUwMjE2QWFGRDFBRDE0NEQiLCJ0byI6IjB4MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSIsInZhbHVlIjoiMTAwMDAwIiwidmFsaWRBZnRlciI6IjE3Njg4OTYwNzQiLCJ2YWxpZEJlZm9yZSI6IjE3Njg4OTY5NzQiLCJub25jZSI6IjB4MTlkN2I1ZmIyYmU1NTNjMmJiZDdkODE2Y2Y1NWEyN2ZhNTFjMmVhNTJiZWQ5NWFmZWI4MWFlMDRiZDliOGVmOCJ9LCJzaWduYXR1cmUiOiIweGU0MGZlMzZkODMwYWEwNWE4NDg3OGM3OTc4NmViODZiMTc4ZDJkZTI2ODc2YmVmMTJkNDc1YzMwZGZjMzUxYjQ3OTgxZDU5YWY3MGE0ZGM1YTg5NmRjNzdjMjZkZWYxZjUxMTExOWI0ZmMyNjk5NzhhNDY5N2JlNjllZGMxNDk3MWIifSwicmVzb3VyY2UiOnsidXJsIjoiaHR0cDovL2xvY2FsaG9zdDo0MDIxL2FwaS9wcmVtaXVtIiwiZGVzY3JpcHRpb24iOiJQcmVtaXVtIEFQSSBlbmRwb2ludCIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MzIiLCJhbW91bnQiOiIxMDAwMDAiLCJhc3NldCI6IjB4MDM2Q2JENTM4NDJjNTQyNjYzNGU3OTI5NTQxZUMyMzE4ZjNkQ0Y3ZSIsInBheVRvIjoiMHgxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTREMiLCJ2ZXJzaW9uIjoiMiJ9fX0=","access-control-expose-headers":"PAYMENT-RESPONSE,X-PAYMENT-RESPONSE","accept":"*/*","accept-language":"*","sec-fetch-mode":"cors","user-agent":"node","accept-encoding":"gzip, deflate"}
+DEBUG: Req Payment: undefined
+DEBUG: Payment Sig found: eyJ4NDAyVmVyc2lvbiI6...
+DEBUG: Parsed Base64 payload
+DEBUG: Route looking up nonce 0x19d7b5fb2be553c2bbd7d816cf55a27fa51c2ea52bed95afeb81ae04bd9b8ef8
+DEBUG: No cached result found for nonce (timed out)
+DEBUG: Intercepted settlePayment call
+DEBUG: Args: [
+  {
+    "x402Version": 2,
+    "payload": {
+      "authorization": {
+        "from": "0x7621106919A7485daF135C1EE0216AaFD1AD144D",
+        "to": "0x1111111111111111111111111111111111111111",
+        "value": "100000",
+        "validAfter": "1768896074",
+        "validBefore": "1768896974",
+        "nonce": "0x19d7b5fb2be553c2bbd7d816cf55a27fa51c2ea52bed95afeb81ae04bd9b8ef8"
+      },
+      "signature": "0xe40fe36d830aa05a84878c79786eb86b178d2de26876bef12d475c30dfc351b47981d59af70a4dc5a896dc77c26def1f511119b4fc269978a4697be69edc14971b"
+    },
+    "resource": {
+      "url": "http://localhost:4021/api/premium",
+      "description": "Premium API endpoint",
+      "mimeType": "application/json"
+    },
+    "accepted": {
+      "scheme": "exact",
+      "network": "eip155:84532",
+      "amount": "100000",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "payTo": "0x1111111111111111111111111111111111111111",
+      "maxTimeoutSeconds": 300,
+      "extra": {
+        "name": "USDC",
+        "version": "2"
+      }
+    }
+  },
+  {
+    "scheme": "exact",
+    "network": "eip155:84532",
+    "amount": "100000",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "payTo": "0x1111111111111111111111111111111111111111",
+    "maxTimeoutSeconds": 300,
+    "extra": {
+      "name": "USDC",
+      "version": "2"
+    }
+  }
+]
+DEBUG: Settle Result: {
+  "success": true,
+  "transaction": "0x077c6eba6aff85426f11d18caf27054d66c90f3e37c70b8a94e9f43ec7ff8cd0",
+  "network": "eip155:84532",
+  "payer": "0x7621106919A7485daF135C1EE0216AaFD1AD144D"
+}
+DEBUG: Cached result for nonce 0x19d7b5fb2be553c2bbd7d816cf55a27fa51c2ea52bed95afeb81ae04bd9b8ef8
+[2026-01-20T08:11:14.861Z] GET /api/premium - 200 (11784ms)
+[2026-01-20T08:16:53.629Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:16:53.629Z] GET /api/premium - 402 (4ms)
+[2026-01-20T08:16:53.663Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+DEBUG: Response Headers: [Object: null prototype] { 'x-powered-by': 'Express' }
+DEBUG: Request Headers: {"host":"localhost:4021","connection":"keep-alive","content-type":"application/json","payment-signature":"eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3JpemF0aW9uIjp7ImZyb20iOiIweDc2MjExMDY5MTlBNzQ4NWRhRjEzNUMxRUUwMjE2QWFGRDFBRDE0NEQiLCJ0byI6IjB4MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMSIsInZhbHVlIjoiMTAwMDAwIiwidmFsaWRBZnRlciI6IjE3Njg4OTY0MTMiLCJ2YWxpZEJlZm9yZSI6IjE3Njg4OTczMTMiLCJub25jZSI6IjB4NzgzYjU5MzA5OGMzMTUxMDlmYzc1NzhmMjNhMDA4ODJiMzEzYjFhN2RiNWI5YjYzNWNkMjZmZGMzM2VmZTZlNSJ9LCJzaWduYXR1cmUiOiIweDVlOGM4YzJmYTg1YjY3ZjYwNmQxOWY2Y2YyOGEyOGEyOTU1OTM3ZDgzMzM5MDRlYTkyNzA5NGY5M2Y1Y2Q2MDg0OTFhNmQyMDFhZTFjMDc3ZTJmNzAzOTk4MDZhMTQyYWI0Zjc4M2FjZjYxNjUxZjU0OTdhMDhmMzlkOTNjYmMwMWMifSwicmVzb3VyY2UiOnsidXJsIjoiaHR0cDovL2xvY2FsaG9zdDo0MDIxL2FwaS9wcmVtaXVtIiwiZGVzY3JpcHRpb24iOiJQcmVtaXVtIEFQSSBlbmRwb2ludCIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9LCJhY2NlcHRlZCI6eyJzY2hlbWUiOiJleGFjdCIsIm5ldHdvcmsiOiJlaXAxNTU6ODQ1MzIiLCJhbW91bnQiOiIxMDAwMDAiLCJhc3NldCI6IjB4MDM2Q2JENTM4NDJjNTQyNjYzNGU3OTI5NTQxZUMyMzE4ZjNkQ0Y3ZSIsInBheVRvIjoiMHgxMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExIiwibWF4VGltZW91dFNlY29uZHMiOjMwMCwiZXh0cmEiOnsibmFtZSI6IlVTREMiLCJ2ZXJzaW9uIjoiMiJ9fX0=","access-control-expose-headers":"PAYMENT-RESPONSE,X-PAYMENT-RESPONSE","accept":"*/*","accept-language":"*","sec-fetch-mode":"cors","user-agent":"node","accept-encoding":"gzip, deflate"}
+DEBUG: Req Payment: undefined
+DEBUG: Payment Sig found: eyJ4NDAyVmVyc2lvbiI6...
+DEBUG: Parsed Base64 payload
+DEBUG: Route looking up nonce 0x783b593098c315109fc7578f23a00882b313b1a7db5b9b635cd26fdc33efe6e5
+DEBUG: No cached result found for nonce (timed out)
+DEBUG: Intercepted settlePayment call
+DEBUG: Args: [
+  {
+    "x402Version": 2,
+    "payload": {
+      "authorization": {
+        "from": "0x7621106919A7485daF135C1EE0216AaFD1AD144D",
+        "to": "0x1111111111111111111111111111111111111111",
+        "value": "100000",
+        "validAfter": "1768896413",
+        "validBefore": "1768897313",
+        "nonce": "0x783b593098c315109fc7578f23a00882b313b1a7db5b9b635cd26fdc33efe6e5"
+      },
+      "signature": "0x5e8c8c2fa85b67f606d19f6cf28a28a2955937d8333904ea927094f93f5cd608491a6d201ae1c077e2f70399806a142ab4f783acf61651f5497a08f39d93cbc01c"
+    },
+    "resource": {
+      "url": "http://localhost:4021/api/premium",
+      "description": "Premium API endpoint",
+      "mimeType": "application/json"
+    },
+    "accepted": {
+      "scheme": "exact",
+      "network": "eip155:84532",
+      "amount": "100000",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "payTo": "0x1111111111111111111111111111111111111111",
+      "maxTimeoutSeconds": 300,
+      "extra": {
+        "name": "USDC",
+        "version": "2"
+      }
+    }
+  },
+  {
+    "scheme": "exact",
+    "network": "eip155:84532",
+    "amount": "100000",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "payTo": "0x1111111111111111111111111111111111111111",
+    "maxTimeoutSeconds": 300,
+    "extra": {
+      "name": "USDC",
+      "version": "2"
+    }
+  }
+]
+DEBUG: Settle Result: {
+  "success": true,
+  "transaction": "0x8891116b5b88a998d12eda2982caad6c4c4118ef559844a0159cd2796ff99e93",
+  "network": "eip155:84532",
+  "payer": "0x7621106919A7485daF135C1EE0216AaFD1AD144D"
+}
+DEBUG: Cached result for nonce 0x783b593098c315109fc7578f23a00882b313b1a7db5b9b635cd26fdc33efe6e5
+[2026-01-20T08:16:53.663Z] GET /api/premium - 200 (11802ms)

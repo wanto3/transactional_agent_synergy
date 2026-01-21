@@ -1,0 +1,135 @@
+
+> railbridge-facilitator@1.0.0 test:merchant-same-chain
+> tsx src/merchant-server-same-chain.ts
+
+🛒 Merchant server (same-chain only) listening at http://localhost:4021
+Using facilitator at: http://localhost:4022
+Merchant address: 0x1111111111111111111111111111111111111111
+[2026-01-20T08:01:14.604Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:01:14.604Z] GET /api/premium - 402 (7ms)
+[2026-01-20T08:01:14.662Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+DEBUG: Response Headers: [Object: null prototype] { 'x-powered-by': 'Express' }
+DEBUG: Intercepted settlePayment call
+DEBUG: Args: [
+  {
+    "x402Version": 2,
+    "payload": {
+      "authorization": {
+        "from": "0x7621106919A7485daF135C1EE0216AaFD1AD144D",
+        "to": "0x1111111111111111111111111111111111111111",
+        "value": "100000",
+        "validAfter": "1768895474",
+        "validBefore": "1768896374",
+        "nonce": "0xece21f4a36e8202aab2e86ecd6694ab2b0f85f0db808f4a316038dbd551c839f"
+      },
+      "signature": "0xa650c26b12edfa2580f51bf88f4003dcb04b93256b77ae1ceec97e27827c162c63681ee1b3439dbc139bcd5c42f1b6c36e3c93b8bef2c7a28f0d4ea216dcff761b"
+    },
+    "resource": {
+      "url": "http://localhost:4021/api/premium",
+      "description": "Premium API endpoint",
+      "mimeType": "application/json"
+    },
+    "accepted": {
+      "scheme": "exact",
+      "network": "eip155:84532",
+      "amount": "100000",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "payTo": "0x1111111111111111111111111111111111111111",
+      "maxTimeoutSeconds": 300,
+      "extra": {
+        "name": "USDC",
+        "version": "2"
+      }
+    }
+  },
+  {
+    "scheme": "exact",
+    "network": "eip155:84532",
+    "amount": "100000",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "payTo": "0x1111111111111111111111111111111111111111",
+    "maxTimeoutSeconds": 300,
+    "extra": {
+      "name": "USDC",
+      "version": "2"
+    }
+  }
+]
+DEBUG: Settle Result: {
+  "success": true,
+  "transaction": "0x165fec91dec412a5cbc0f44d3439e7c1561c82a4845369da0c9ed279f1a35c63",
+  "network": "eip155:84532",
+  "payer": "0x7621106919A7485daF135C1EE0216AaFD1AD144D"
+}
+DEBUG: Cached result for nonce 0xece21f4a36e8202aab2e86ecd6694ab2b0f85f0db808f4a316038dbd551c839f
+[2026-01-20T08:01:14.662Z] GET /api/premium - 200 (5181ms)
+[2026-01-20T08:06:38.016Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+[2026-01-20T08:06:38.016Z] GET /api/premium - 402 (3ms)
+[2026-01-20T08:06:38.045Z] GET /api/premium
+   IP: ::1
+   User-Agent: node
+   Payment: eyJ4NDAyVmVyc2lvbiI6MiwicGF5bG9hZCI6eyJhdXRob3Jpem...
+✅ Premium content accessed - Payment verified and settled
+DEBUG: Response Headers: [Object: null prototype] { 'x-powered-by': 'Express' }
+DEBUG: Intercepted settlePayment call
+DEBUG: Args: [
+  {
+    "x402Version": 2,
+    "payload": {
+      "authorization": {
+        "from": "0x7621106919A7485daF135C1EE0216AaFD1AD144D",
+        "to": "0x1111111111111111111111111111111111111111",
+        "value": "100000",
+        "validAfter": "1768895798",
+        "validBefore": "1768896698",
+        "nonce": "0xd1be639a56d24f80560c3126615a5e275ba60c338d5b96b802adca665ecf5502"
+      },
+      "signature": "0xfc4ef6c414f2d87a7601cca350ce4a7c783bb1b4a717c2c49f0a6be7b69d8d1576ae07840813413b266cdd6145cef0327197be3b56edceb220e1030e2ee8f6cd1c"
+    },
+    "resource": {
+      "url": "http://localhost:4021/api/premium",
+      "description": "Premium API endpoint",
+      "mimeType": "application/json"
+    },
+    "accepted": {
+      "scheme": "exact",
+      "network": "eip155:84532",
+      "amount": "100000",
+      "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+      "payTo": "0x1111111111111111111111111111111111111111",
+      "maxTimeoutSeconds": 300,
+      "extra": {
+        "name": "USDC",
+        "version": "2"
+      }
+    }
+  },
+  {
+    "scheme": "exact",
+    "network": "eip155:84532",
+    "amount": "100000",
+    "asset": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+    "payTo": "0x1111111111111111111111111111111111111111",
+    "maxTimeoutSeconds": 300,
+    "extra": {
+      "name": "USDC",
+      "version": "2"
+    }
+  }
+]
+DEBUG: Settle Result: {
+  "success": true,
+  "transaction": "0x71859debd7763f88c9a6a7c60e84e3febc48d5ac2485151a10b54e49ff8233fc",
+  "network": "eip155:84532",
+  "payer": "0x7621106919A7485daF135C1EE0216AaFD1AD144D"
+}
+DEBUG: Cached result for nonce 0xd1be639a56d24f80560c3126615a5e275ba60c338d5b96b802adca665ecf5502
+[2026-01-20T08:06:38.045Z] GET /api/premium - 200 (5378ms)
