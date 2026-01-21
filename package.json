@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "test:integration": "tsx src/integration-test.ts",
-    "start:merchant": "cd railbridge_external/facilitator && npm run dev"
+    "start:merchant": "concurrently \"cd railbridge_external/facilitator && npm run dev\" \"cd railbridge_external/facilitator && npm run test:merchant\""
   },
   "keywords": [],
   "author": "",

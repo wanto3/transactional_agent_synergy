@@ -11,7 +11,7 @@ npm install
 cd railbridge_external/facilitator && npm install && cd ../..
 
 # Configure Env
-cp .env.template .env.local
+cp .env.local.template .env.local
 # Edit .env.local with your Private Key(s) (Agent & Merchant)
 ```
 
